@@ -82,18 +82,27 @@
   </style>
 </head>
 <body>
+  <!-- <div class="absolute top-4 left-4 hidden lg:flex items-center gap-3 sm:gap-4 z-10">
+    <img src="/public/icon.png" alt="PLV Logo" class="h-20 w-20 sm:h-24 sm:w-24 object-contain">
+    <div>
+      <p class="text-amber-50 font-bold text-xl sm:text-2xl" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Pamantasan ng Lungsod ng Valenzuela</p>
+      <p class="text-amber-100 text-lg sm:text-xl" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Filipino Department</p>
+    </div>
+  </div> -->
   <div class="min-h-screen flex flex-col items-center justify-center p-2 sm:p-4">
-    
+
     <!-- Access Code Screen -->
-    <div id="accessCodeScreen" class="w-full max-w-md bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg shadow-2xl p-8">
-      <div class="text-center mb-6">
-        <div class="w-20 h-20 bg-gradient-to-br from-amber-700 to-amber-900 rounded-full flex items-center justify-center text-3xl font-bold text-amber-50 mx-auto mb-4">
-          S
-        </div>
-        <h2 class="text-2xl font-bold text-amber-900 mb-2">SIKHAY Quiz</h2>
-        <p class="text-amber-800 text-sm mb-3">Ilagay ang iyong access code upang magpatuloy</p>
+    <div id="accessCodeScreen" class="w-full max-w-md">
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg shadow-2xl p-8">
+        <div class="text-center mb-6">
+          <div class="w-20 h-20 bg-gradient-to-br from-amber-700 to-amber-900 rounded-full flex items-center justify-center text-3xl font-bold text-amber-50 mx-auto mb-4">
+            S
+          </div>
+          <h2 class="text-2xl font-bold text-amber-900 mb-2">SIKHAY</h2>
+          <p class="text-amber-800 text-sm mb-3">Ilagay ang iyong access code upang magpatuloy</p>
+        
         <!-- <div class="text-xs text-amber-700 bg-amber-100 p-3 rounded-lg text-left">
-          <p class="font-semibold mb-1">📝 Available Codes:</p>
+          <p class="font-semibold mb-1">Available Codes:</p>
           <p>• SIKHAY - All sections (24 questions)</p>
           <p>• SIKHAY-PRETEST - Pretest only (5 questions)</p>
           <p>• SIKHAY-ACTIVITY - Activity only (3 questions)</p>
@@ -106,6 +115,39 @@
       
       <div class="space-y-4">
         <div>
+          <label for="studentName" class="block text-sm font-medium text-amber-900 mb-2">Buong Pangalan (Full Name)</label>
+          <input 
+            type="text" 
+            id="studentName" 
+            class="w-full px-4 py-3 border-2 border-amber-300 rounded-lg focus:outline-none focus:border-amber-700 text-amber-950 bg-white"
+            placeholder="Juan Dela Cruz"
+            required
+          />
+        </div>
+        
+        <div>
+          <label for="yearSection" class="block text-sm font-medium text-amber-900 mb-2">Taon at Seksyon (Year and Section)</label>
+          <input 
+            type="text" 
+            id="yearSection" 
+            class="w-full px-4 py-3 border-2 border-amber-300 rounded-lg focus:outline-none focus:border-amber-700 text-amber-950 bg-white"
+            placeholder="4th Year - Section A"
+            required
+          />
+        </div>
+        
+        <div>
+          <label for="studentEmail" class="block text-sm font-medium text-amber-900 mb-2">Email Address</label>
+          <input 
+            type="email" 
+            id="studentEmail" 
+            class="w-full px-4 py-3 border-2 border-amber-300 rounded-lg focus:outline-none focus:border-amber-700 text-amber-950 bg-white"
+            placeholder="juan.delacruz@email.com"
+            required
+          />
+        </div>
+        
+        <div>
           <label for="accessCode" class="block text-sm font-medium text-amber-900 mb-2">Access Code</label>
           <input 
             type="text" 
@@ -113,6 +155,7 @@
             class="w-full px-4 py-3 border-2 border-amber-300 rounded-lg focus:outline-none focus:border-amber-700 text-center text-lg font-semibold tracking-wider bg-white uppercase"
             placeholder="Halimbawa: SIKHAY-PRETEST"
             maxlength="20"
+            required
           />
         </div>
         <p id="accessError" class="text-red-600 text-sm text-center hidden">Mali ang access code. Subukan ulit.</p>
@@ -122,6 +165,24 @@
         >
           Magsimula
         </button>
+      </div>
+      </div>
+      
+      <!-- GitBook Resource Link - Outside the box -->
+      <div class="mt-4 text-center">
+        <a 
+          href="https://lins-documentation.gitbook.io/mcismartspacedocs" 
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-amber-100 hover:text-amber-50 font-medium text-sm underline hover:no-underline transition-all"
+          style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+          <span>Mga Aralin at Sanggunian - Bisitahin ang GitBook Resources</span>
+        </a>
+        <p class="text-amber-200 text-xs mt-2 italic" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Inihanda ni Ginoong Marc Licaros</p>
       </div>
     </div>
 
@@ -164,7 +225,7 @@
         <div id="optionsContainer" class="space-y-2 flex flex-col">
         </div>
 
-        <button id="startBtn" class="w-full bg-gradient-to-r from-amber-800 to-amber-900 hover:from-amber-900 hover:to-amber-950 text-amber-50 font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95">
+        <button id="startBtn" class="w-full bg-gradient-to-r from-amber-800 to-amber-900 text-amber-50 font-semibold py-3 text-base sm:text-lg rounded-lg transition-all">
           Start Quiz
         </button>
       </div>

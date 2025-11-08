@@ -8,6 +8,17 @@ let quizActive = false;
 let answered = false;
 let allowedSections = []; // Will store which sections to show based on access code
 
+// Student information for Google Sheets integration
+let studentInfo = {
+  name: '',
+  yearSection: '',
+  email: '',
+  accessCode: '',
+  startTime: '',
+  endTime: '',
+  answers: [] // Will store all answers with questions
+};
+
 // Access code mapping
 const ACCESS_CODES = {
   'SIKHAY': 'all', // All sections
@@ -24,6 +35,9 @@ const ACCESS_CODES = {
 const accessCodeScreen = document.getElementById('accessCodeScreen');
 const quizContainer = document.getElementById('quizContainer');
 const accessCodeInput = document.getElementById('accessCode');
+const studentNameInput = document.getElementById('studentName');
+const yearSectionInput = document.getElementById('yearSection');
+const studentEmailInput = document.getElementById('studentEmail');
 const submitAccessCodeBtn = document.getElementById('submitAccessCode');
 const accessError = document.getElementById('accessError');
 
@@ -38,8 +52,49 @@ let synth = window.speechSynthesis;
 // Access Code Handler
 function checkAccessCode() {
   const enteredCode = accessCodeInput.value.trim().toUpperCase();
+  const studentName = studentNameInput.value.trim();
+  const yearSection = yearSectionInput.value.trim();
+  const studentEmail = studentEmailInput.value.trim();
+  
+  // Validate all fields
+  if (!studentName) {
+    accessError.textContent = 'Pakilagay ang iyong buong pangalan.';
+    accessError.classList.remove('hidden');
+    studentNameInput.focus();
+    return;
+  }
+  
+  if (!yearSection) {
+    accessError.textContent = 'Pakilagay ang iyong taon at seksyon.';
+    accessError.classList.remove('hidden');
+    yearSectionInput.focus();
+    return;
+  }
+  
+  if (!studentEmail) {
+    accessError.textContent = 'Pakilagay ang iyong email address.';
+    accessError.classList.remove('hidden');
+    studentEmailInput.focus();
+    return;
+  }
+  
+  // Simple email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(studentEmail)) {
+    accessError.textContent = 'Mali ang format ng email address.';
+    accessError.classList.remove('hidden');
+    studentEmailInput.focus();
+    return;
+  }
   
   if (ACCESS_CODES.hasOwnProperty(enteredCode)) {
+    // Store student information
+    studentInfo.name = studentName;
+    studentInfo.yearSection = yearSection;
+    studentInfo.email = studentEmail;
+    studentInfo.accessCode = enteredCode;
+    studentInfo.startTime = new Date().toISOString();
+    
     allowedSections = ACCESS_CODES[enteredCode];
     accessCodeScreen.classList.add('hidden');
     quizContainer.classList.remove('hidden');
@@ -48,6 +103,7 @@ function checkAccessCode() {
     // Filter sections based on access code
     filterSections();
   } else {
+    accessError.textContent = 'Mali ang access code. Subukan ulit.';
     accessError.classList.remove('hidden');
     accessCodeInput.value = '';
     accessCodeInput.focus();
@@ -116,7 +172,7 @@ function showSection() {
   currentQuestionIndex = 0;
 
   // Show section title
-  addBotMessage(`📚 ${section.title}`);
+  addBotMessage(`${section.title}`);
   
   setTimeout(() => {
     // Show instruction
@@ -125,7 +181,7 @@ function showSection() {
     setTimeout(() => {
       // Special handling for ACTIVITY section with story
       if (section.section === 'ACTIVITY' && section.story) {
-        addBotMessage(`📖 ${section.story.title}`);
+        addBotMessage(`${section.story.title}`);
         setTimeout(() => {
           addBotMessage(section.story.content);
           setTimeout(() => {
@@ -138,7 +194,7 @@ function showSection() {
       } 
       // Special handling for ABSTRACT section with word bank
       else if (section.section === 'ABSTRACT' && section.wordBank) {
-        addBotMessage(`📝 Mga Pagpipilian: ${section.wordBank.join(', ')}`);
+        addBotMessage(`Mga Pagpipilian: ${section.wordBank.join(', ')}`);
         setTimeout(() => {
           addBotMessage(section.context);
           setTimeout(() => {
@@ -182,11 +238,19 @@ function showQuestion() {
     
     // Display options based on question type
     if (question.type === 'open-ended') {
-      // For open-ended, show a note
-      setTimeout(() => {
-        addBotMessage('💡 Ito ay bukas na tanong. Pag-isipan ang iyong sagot at pindutin ang "Ipakita ang Sagot" upang makita ang tamang sagot.');
-        displayOpenEndedOption(question);
-      }, 1000);
+      // Check if it's ACTIVITY section - use text input
+      if (section.section === 'ACTIVITY') {
+        setTimeout(() => {
+          addBotMessage('Ito ay bukas na tanong. Ilagay ang iyong sagot sa kahon sa ibaba.');
+          displayTextInputOption(question);
+        }, 1000);
+      } else {
+        // For other open-ended, show a note
+        setTimeout(() => {
+          addBotMessage('Ito ay bukas na tanong. Pag-isipan ang iyong sagot at pindutin ang "Ipakita ang Sagot" upang makita ang tamang sagot.');
+          displayOpenEndedOption(question);
+        }, 1000);
+      }
     } else if (question.type === 'fill-in-blank') {
       // For fill-in-blank, show word bank as options
       displayFillInBlankOptions(question);
@@ -285,12 +349,83 @@ function displayOpenEndedOption(question) {
   
   const btn = document.createElement('button');
   btn.className = 'option-btn w-full bg-amber-700 border-2 border-amber-800 hover:bg-amber-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-amber-50 transition-all';
-  btn.textContent = '💡 Ipakita ang Sagot';
+  btn.textContent = 'Ipakita ang Sagot';
   btn.onclick = () => showOpenEndedAnswer(question);
   optionsContainer.appendChild(btn);
   
   // Update spacer to push chat content up
   updateChatSpacer();
+}
+
+function displayTextInputOption(question) {
+  optionsContainer.innerHTML = '';
+  
+  // Create textarea for student answer
+  const textarea = document.createElement('textarea');
+  textarea.className = 'w-full px-4 py-3 border-2 border-amber-300 rounded-lg focus:outline-none focus:border-amber-700 text-amber-950 resize-none';
+  textarea.placeholder = 'Ilagay ang iyong sagot dito...';
+  textarea.rows = 4;
+  textarea.id = 'studentAnswer';
+  
+  // Create submit button
+  const submitBtn = document.createElement('button');
+  submitBtn.className = 'option-btn w-full bg-amber-700 border-2 border-amber-800 hover:bg-amber-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-amber-50 transition-all mt-2';
+  submitBtn.textContent = 'Ipasa ang Sagot';
+  submitBtn.onclick = () => submitTextAnswer(question, textarea);
+  
+  optionsContainer.appendChild(textarea);
+  optionsContainer.appendChild(submitBtn);
+  
+  // Update spacer to push chat content up
+  updateChatSpacer();
+  
+  // Focus on textarea
+  setTimeout(() => textarea.focus(), 100);
+}
+
+function submitTextAnswer(question, textarea) {
+  const studentAnswer = textarea.value.trim();
+  
+  if (!studentAnswer) {
+    addBotMessage('Mangyaring magsulat ng sagot bago ipasa.');
+    return;
+  }
+  
+  answered = true;
+  textarea.disabled = true;
+  disableAllOptions();
+  
+  addUserMessage(studentAnswer);
+  
+  // Store answer for Google Sheets
+  const section = sections[currentSectionIndex];
+  studentInfo.answers.push({
+    section: section.section,
+    questionNumber: getGlobalQuestionNumber(),
+    question: question.question,
+    studentAnswer: studentAnswer,
+    correctAnswer: question.answer,
+    isCorrect: true, // Credit given for open-ended
+    attempts: 1
+  });
+  
+  setTimeout(() => {
+    addBotMessage('Salamat sa iyong sagot! Narito ang inaasahang sagot:');
+    setTimeout(() => {
+      addBotMessage(question.answer);
+      score++; // Give credit for answering
+      updateScore();
+      
+      setTimeout(() => {
+        addBotMessage('ANEK WOW! Matalas ang iyong pagsusuri at pag-unawa sa aralin. Kaya naman magtutungo na tayo sa susunod na katanungan.');
+        
+        setTimeout(() => {
+          currentQuestionIndex++;
+          showQuestion();
+        }, 2000);
+      }, 1500);
+    }, 1000);
+  }, 500);
 }
 
 function updateChatSpacer() {
@@ -308,8 +443,20 @@ function showOpenEndedAnswer(question) {
   
   addUserMessage('Nais kong makita ang sagot.');
   
+  // Store answer for Google Sheets
+  const section = sections[currentSectionIndex];
+  studentInfo.answers.push({
+    section: section.section,
+    questionNumber: getGlobalQuestionNumber(),
+    question: question.question,
+    studentAnswer: 'Viewed answer directly',
+    correctAnswer: question.answer,
+    isCorrect: true, // Credit given
+    attempts: 1
+  });
+  
   setTimeout(() => {
-    addBotMessage('✅ Inaasahang Sagot:');
+    addBotMessage('Inaasahang Sagot:');
     setTimeout(() => {
       addBotMessage(question.answer);
       score++; // Give credit for open-ended questions
@@ -337,11 +484,24 @@ function checkAnswer(selectedOption, selectedText) {
   disableAllOptions();
 
   addUserMessage(selectedText);
+  
+  const isCorrect = selectedOption === question.correct;
 
-  if (selectedOption === question.correct) {
+  // Store answer for Google Sheets
+  studentInfo.answers.push({
+    section: section.section,
+    questionNumber: getGlobalQuestionNumber(),
+    question: question.question,
+    studentAnswer: selectedText,
+    correctAnswer: question.options ? question.options[question.correct] : question.correct,
+    isCorrect: isCorrect,
+    attempts: wrongAttempts + 1
+  });
+
+  if (isCorrect) {
     score++;
     updateScore();
-    addBotMessage('ANEK WOW! Tumpak! Matalas ang iyong pagsusuri at pag-unawa sa aralin. Kaya naman magtutungo na tayo sa susunod na katanungan. 🎉');
+    addBotMessage('ANEK WOW! Tumpak! Matalas ang iyong pagsusuri at pag-unawa sa aralin. Kaya naman magtutungo na tayo sa susunod na katanungan.');
     // speakText('Tumpak! Correct!'); // Voice disabled
 
     setTimeout(() => {
@@ -352,7 +512,7 @@ function checkAnswer(selectedOption, selectedText) {
     wrongAttempts++;
     
     if (wrongAttempts < 3) {
-      addBotMessage(`ANEK DAW? Subukan muli! Balikan at suriin pang mabuti ang aralin. ❌ (${wrongAttempts}/3)`);
+      addBotMessage(`ANEK DAW? Subukan muli! Balikan at suriin pang mabuti ang aralin. (${wrongAttempts}/3)`);
       // speakText('Subukan muli!'); // Voice disabled
       answered = false;
       enableAllOptions();
@@ -391,23 +551,35 @@ function updateScore() {
 function endQuiz() {
   quizActive = false;
   optionsContainer.innerHTML = '';
+  
+  // Set end time
+  studentInfo.endTime = new Date().toISOString();
+  studentInfo.score = score;
+  studentInfo.totalQuestions = totalQuestions;
+  studentInfo.percentage = ((score / totalQuestions) * 100).toFixed(1);
 
   const percentage = ((score / totalQuestions) * 100).toFixed(1);
   let message = '';
 
   if (percentage >= 90) {
-    message = '🌟 Napakahusay! Excellent work! Perpekto ang iyong pag-unawa!';
+    message = 'Napakahusay! Excellent work! Perpekto ang iyong pag-unawa!';
   } else if (percentage >= 75) {
-    message = '👏 Mahusay! Very good! Mataas ang iyong marka!';
+    message = 'Mahusay! Very good! Mataas ang iyong marka!';
   } else if (percentage >= 60) {
-    message = '✅ Mabuti! Good job! Mayroon kang mabuting pag-unawa.';
+    message = 'Mabuti! Good job! Mayroon kang mabuting pag-unawa.';
   } else {
-    message = '📚 Kailangan mo pang mag-aral. Keep trying!';
+    message = 'Kailangan mo pang mag-aral. Keep trying!';
   }
 
-  addBotMessage(`🎉 Quiz complete! Your score: ${score}/${totalQuestions} (${percentage}%)`);
+  addBotMessage(`Quiz complete! Your score: ${score}/${totalQuestions} (${percentage}%)`);
   addBotMessage(message);
   // speakText(`Quiz complete! Your score: ${score} out of ${totalQuestions}`); // Voice disabled
+  
+  // Log student data for Google Sheets integration (you can see this in browser console)
+  console.log('Student Quiz Data for Google Sheets:', studentInfo);
+  
+  // Send data to Google Sheets
+  sendToGoogleSheets(studentInfo);
 
   const restartBtn = document.createElement('button');
   restartBtn.className = 'w-full bg-gradient-to-r from-amber-800 to-amber-900 hover:from-amber-900 hover:to-amber-950 text-amber-50 font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
@@ -425,6 +597,34 @@ function speakText(text) {
   // utterance.lang = 'tl-PH';
   // utterance.rate = 0.9;
   // synth.speak(utterance);
+}
+
+// Google Sheets Integration
+// IMPORTANT: Replace this URL with your own Google Apps Script Web App URL
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrosvgFSwjqIZw2zTbGfg_b_XybR2sbhbdTnh7GmYtCO7WjSKpw6GaPdYE6bsZo3G0tg/exec';
+
+async function sendToGoogleSheets(data) {
+  try {
+    // Show sending message
+    addBotMessage('Ipinapadala ang iyong mga sagot sa Google Sheets...');
+    
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors', // Important for Google Apps Script
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    });
+    
+    // Note: With 'no-cors', we can't read the response, but the data is sent
+    console.log('Data sent to Google Sheets successfully');
+    addBotMessage('Matagumpay na naipadala ang iyong mga sagot!');
+    
+  } catch (error) {
+    console.error('Error sending to Google Sheets:', error);
+    addBotMessage('May problema sa pagpapadala ng data. Ngunit naitala na ang iyong score.');
+  }
 }
 
 // Initialize on load

@@ -40,7 +40,7 @@
 
 ### 5. **Section Flow**
 Each section follows this pattern:
-1. 📚 Section title announcement
+1. Section title announcement
 2. 📝 Instructions display
 3. 📖 Special content (story for ACTIVITY, word bank for ABSTRACT)
 4. ❓ Questions one by one
