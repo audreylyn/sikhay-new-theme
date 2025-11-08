@@ -7,6 +7,14 @@ let timerInterval = null;
 let quizActive = false;
 let answered = false;
 
+const ACCESS_CODE = 'SIKHAY'; // Change this to your desired access code
+
+const accessCodeScreen = document.getElementById('accessCodeScreen');
+const quizContainer = document.getElementById('quizContainer');
+const accessCodeInput = document.getElementById('accessCode');
+const submitAccessCodeBtn = document.getElementById('submitAccessCode');
+const accessError = document.getElementById('accessError');
+
 const chatContainer = document.getElementById('chatContainer');
 const optionsContainer = document.getElementById('optionsContainer');
 const startBtn = document.getElementById('startBtn');
@@ -14,6 +22,27 @@ const timerDisplay = document.getElementById('timerDisplay');
 const headerScore = document.getElementById('headerScore');
 
 let synth = window.speechSynthesis;
+
+// Access Code Handler
+function checkAccessCode() {
+  const enteredCode = accessCodeInput.value.trim().toUpperCase();
+  if (enteredCode === ACCESS_CODE) {
+    accessCodeScreen.classList.add('hidden');
+    quizContainer.classList.remove('hidden');
+    accessError.classList.add('hidden');
+  } else {
+    accessError.classList.remove('hidden');
+    accessCodeInput.value = '';
+    accessCodeInput.focus();
+  }
+}
+
+submitAccessCodeBtn.addEventListener('click', checkAccessCode);
+accessCodeInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    checkAccessCode();
+  }
+});
 
 function initializeQuiz() {
   fetch('questions.json')
@@ -66,11 +95,11 @@ function addBotMessage(text) {
   const messageDiv = document.createElement('div');
   messageDiv.className = 'message-bubble flex gap-2';
   messageDiv.innerHTML = `
-    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex-shrink-0 flex items-center justify-center text-white text-sm font-bold">
+    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-700 to-amber-900 flex-shrink-0 flex items-center justify-center text-amber-50 text-sm sm:text-base font-bold">
       S
     </div>
-    <div class="bg-gray-100 rounded-lg rounded-tl-none p-4 max-w-xs md:max-w-sm text-gray-800">
-      <p class="text-sm">${text}</p>
+    <div class="bg-white border-2 border-amber-200 rounded-lg rounded-tl-none p-3 sm:p-4 max-w-[75%] sm:max-w-md text-amber-950">
+      <p class="text-sm sm:text-base">${text}</p>
     </div>
   `;
   chatContainer.appendChild(messageDiv);
@@ -81,10 +110,10 @@ function addUserMessage(text) {
   const messageDiv = document.createElement('div');
   messageDiv.className = 'user-bubble flex gap-2 justify-end';
   messageDiv.innerHTML = `
-    <div class="bg-blue-600 rounded-lg rounded-tr-none p-4 max-w-xs md:max-w-sm text-white">
-      <p class="text-sm">${text}</p>
+    <div class="bg-amber-800 rounded-lg rounded-tr-none p-3 sm:p-4 max-w-[75%] sm:max-w-md text-amber-50">
+      <p class="text-sm sm:text-base">${text}</p>
     </div>
-    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex-shrink-0 flex items-center justify-center text-white text-sm font-bold">
+    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-green-600 to-green-800 flex-shrink-0 flex items-center justify-center text-white text-sm sm:text-base font-bold">
       U
     </div>
   `;
@@ -102,7 +131,7 @@ function displayOptions() {
 
   options.forEach(option => {
     const btn = document.createElement('button');
-    btn.className = 'option-btn w-full bg-white border-2 border-blue-300 hover:border-blue-500 text-left p-3 rounded-lg font-medium text-gray-800 transition-all';
+    btn.className = 'option-btn w-full bg-white border-2 border-amber-300 hover:border-amber-700 hover:bg-amber-50 text-left p-3 sm:p-4 rounded-lg font-medium text-amber-950 transition-all';
     btn.textContent = `${option.toUpperCase()}: ${question.options[option]}`;
     btn.onclick = () => checkAnswer(option, question.options[option]);
     optionsContainer.appendChild(btn);
