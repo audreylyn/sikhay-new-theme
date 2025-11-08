@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIKHAY - Student Assistant Bot Quiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .message-bubble {
+      animation: fadeInUp 0.3s ease-out;
+    }
+
+    .user-bubble {
+      animation: slideInRight 0.3s ease-out;
+    }
+
+    .chat-container {
+      scroll-behavior: smooth;
+    }
+
+    .option-btn {
+      transition: all 0.2s ease;
+    }
+
+    .option-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .option-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .timer-ring {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 24px;
+      transition: all 0.1s ease;
+    }
+
+    .timer-danger {
+      background-color: #fee2e2;
+      color: #dc2626;
+      border: 3px solid #dc2626;
+    }
+
+    .timer-warning {
+      background-color: #fef3c7;
+      color: #d97706;
+      border: 3px solid #d97706;
+    }
+
+    .timer-normal {
+      background-color: #dbeafe;
+      color: #2563eb;
+      border: 3px solid #2563eb;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-50">
+  <div class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-2xl bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col h-screen md:h-auto md:max-h-[600px]">
+
+      <header class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 shadow-md">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-lg font-bold text-blue-600">
+              S
+            </div>
+            <div>
+              <h1 class="text-xl font-bold">SIKHAY</h1>
+              <p class="text-xs text-blue-100">Student Assistant Bot</p>
+            </div>
+          </div>
+          <div id="headerScore" class="text-sm font-semibold bg-blue-700 px-3 py-1 rounded-full">
+            Score: 0/18
+          </div>
+        </div>
+      </header>
+
+      <div id="chatContainer" class="flex-1 overflow-y-auto p-4 space-y-4 chat-container">
+        <div class="message-bubble flex gap-2">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex-shrink-0 flex items-center justify-center text-white text-sm font-bold">
+            S
+          </div>
+          <div class="bg-gray-100 rounded-lg rounded-tl-none p-4 max-w-xs md:max-w-sm text-gray-800">
+            <p class="text-sm">Magandang araw, mahuhusay na mag-aaral!</p>
+            <p class="text-sm mt-2">Ako si SIKHAY at ang iyong Student-Assistant Bot at natutuwa ako na tulungan kang matapos ang Aralin na ito.</p>
+            <p class="text-sm mt-2">Magsimula na tayo! Handa ka na bang magquiz?</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="inputContainer" class="border-t border-gray-200 p-4 bg-gray-50 space-y-3">
+        <div id="timerContainer" class="flex justify-center mb-2">
+          <div id="timerDisplay" class="timer-ring timer-normal">
+            20
+          </div>
+        </div>
+
+        <div id="optionsContainer" class="space-y-2 flex flex-col">
+        </div>
+
+        <button id="startBtn" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 rounded-lg transition-all transform hover:scale-105 active:scale-95">
+          Start Quiz
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
