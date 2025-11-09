@@ -1,9 +1,14 @@
 {
-  "name": "sikhay-quiz-app",
+  "name": "vite-starter",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "npx serve .",
-    "build": "echo 'No build needed for static site'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
   }
 }
