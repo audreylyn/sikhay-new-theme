@@ -615,7 +615,7 @@ function speakText(text) {
 
 // Google Sheets Integration
 // IMPORTANT: Replace this URL with your own Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxka6m1xeutkB_M6VpHatLNRUbX5Ws7-YwP3AFtobOlXAwl6htOSMcyoTUJ_Z5XaSE2aA/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWfAL7EFFoFxYMMpUODgFBjAziHNp0I2Bo_kWBLITFHZGf5xHxPM2PN5-AcNiH5_4A/exec';
 
 async function sendToGoogleSheets(data) {
   try {
