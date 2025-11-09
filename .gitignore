@@ -22,3 +22,24 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables
+.env
+
+# Documentation files (keep in repo but not for deployment tracking)
+ACCESS-CODES.md
+ADDING-NEW-TOPICS-GUIDE.md
+BULK-EMAIL-PORTFOLIO-LINKS.md
+GOOGLE-DRIVE-PORTFOLIO-SETUP.md
+GOOGLE-SHEETS-SETUP.md
+IMPLEMENTATION-GUIDE.md
+IMPLEMENTATION-SUMMARY.md
+CHATBOT Q&A.txt
+
+# Unused/old files
+counter.js
+main.js
+script.js
+questions.json
+javascript.svg
+
