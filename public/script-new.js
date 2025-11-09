@@ -139,7 +139,7 @@ accessCodeInput.addEventListener('keypress', (e) => {
 let allSections = []; // Store all sections from JSON
 
 function initializeQuiz() {
-  fetch('/public/questions-new.json')
+  fetch('/questions-new.json')
     .then(response => response.json())
     .then(data => {
       allSections = data;
@@ -309,7 +309,7 @@ function addBotMessage(text) {
   const messageDiv = document.createElement('div');
   messageDiv.className = 'message-bubble flex gap-2';
   messageDiv.innerHTML = `
-    <img src="/public/chatbot-logo.png" alt="SIKHAY" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex-shrink-0 drop-shadow-lg">
+    <img src="/chatbot-logo.png" alt="SIKHAY" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex-shrink-0 drop-shadow-lg">
     <div class="bg-gray-100 border-2 border-blue-500/20 rounded-lg rounded-tl-none p-3 sm:p-4 max-w-[75%] sm:max-w-md text-slate-900">
       <p class="text-sm sm:text-base">${text}</p>
     </div>
