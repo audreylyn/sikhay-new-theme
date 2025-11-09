@@ -10,20 +10,11 @@
       ]
     },
     {
-      "source": "/script-new.js",
+      "source": "/public/(.*)",
       "headers": [
         {
-          "key": "Content-Type",
-          "value": "application/javascript"
-        }
-      ]
-    },
-    {
-      "source": "/questions-new.json",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/json"
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
         }
       ]
     }

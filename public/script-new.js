@@ -139,7 +139,7 @@ accessCodeInput.addEventListener('keypress', (e) => {
 let allSections = []; // Store all sections from JSON
 
 function initializeQuiz() {
-  fetch('/questions-new.json')
+  fetch('/public/questions-new.json')
     .then(response => response.json())
     .then(data => {
       allSections = data;
@@ -309,10 +309,8 @@ function addBotMessage(text) {
   const messageDiv = document.createElement('div');
   messageDiv.className = 'message-bubble flex gap-2';
   messageDiv.innerHTML = `
-    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-700 to-amber-900 flex-shrink-0 flex items-center justify-center text-amber-50 text-sm sm:text-base font-bold">
-      S
-    </div>
-    <div class="bg-white border-2 border-amber-200 rounded-lg rounded-tl-none p-3 sm:p-4 max-w-[75%] sm:max-w-md text-amber-950">
+    <img src="/public/chatbot-logo.png" alt="SIKHAY" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex-shrink-0 drop-shadow-lg">
+    <div class="bg-gray-100 border-2 border-blue-500/20 rounded-lg rounded-tl-none p-3 sm:p-4 max-w-[75%] sm:max-w-md text-slate-900">
       <p class="text-sm sm:text-base">${text}</p>
     </div>
   `;
@@ -324,10 +322,10 @@ function addUserMessage(text) {
   const messageDiv = document.createElement('div');
   messageDiv.className = 'user-bubble flex gap-2 justify-end';
   messageDiv.innerHTML = `
-    <div class="bg-amber-800 rounded-lg rounded-tr-none p-3 sm:p-4 max-w-[75%] sm:max-w-md text-amber-50">
+    <div class="bg-blue-600 border-2 border-blue-500 rounded-lg rounded-tr-none p-3 sm:p-4 max-w-[75%] sm:max-w-md text-white shadow-lg" style="box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);">
       <p class="text-sm sm:text-base">${text}</p>
     </div>
-    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-green-600 to-green-800 flex-shrink-0 flex items-center justify-center text-white text-sm sm:text-base font-bold">
+    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-green-600 to-green-800 flex-shrink-0 flex items-center justify-center text-white text-sm sm:text-base font-bold shadow-lg" style="box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);">
       U
     </div>
   `;
@@ -351,7 +349,7 @@ function displayOptions() {
 
   options.forEach(option => {
     const btn = document.createElement('button');
-    btn.className = 'option-btn w-full bg-white border-2 border-amber-300 hover:border-amber-700 hover:bg-amber-50 text-left p-3 sm:p-4 rounded-lg font-medium text-amber-950 transition-all';
+    btn.className = 'option-btn w-full bg-gray-100 border-2 border-blue-500/50 hover:border-blue-400 hover:bg-gray-200 text-left p-3 sm:p-4 rounded-lg font-medium text-slate-900 transition-all';
     btn.textContent = `${option.toUpperCase()}: ${question.options[option]}`;
     btn.onclick = () => checkAnswer(option, question.options[option]);
     optionsContainer.appendChild(btn);
@@ -370,7 +368,7 @@ function displayFillInBlankOptions(question) {
 
   wordBank.forEach(word => {
     const btn = document.createElement('button');
-    btn.className = 'option-btn w-full bg-white border-2 border-amber-300 hover:border-amber-700 hover:bg-amber-50 text-center p-3 sm:p-4 rounded-lg font-medium text-amber-950 transition-all';
+    btn.className = 'option-btn w-full bg-gray-100 border-2 border-blue-500/50 hover:border-blue-400 hover:bg-gray-200 text-center p-3 sm:p-4 rounded-lg font-medium text-slate-900 transition-all';
     btn.textContent = word;
     btn.onclick = () => checkAnswer(word, word);
     optionsContainer.appendChild(btn);
@@ -384,7 +382,8 @@ function displayOpenEndedOption(question) {
   optionsContainer.innerHTML = '';
   
   const btn = document.createElement('button');
-  btn.className = 'option-btn w-full bg-amber-700 border-2 border-amber-800 hover:bg-amber-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-amber-50 transition-all';
+  btn.className = 'option-btn w-full bg-blue-700 border-2 border-blue-600 hover:bg-blue-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-white transition-all';
+  btn.style.boxShadow = '0 0 15px rgba(59, 130, 246, 0.4)';
   btn.textContent = 'Ipakita ang Sagot';
   btn.onclick = () => showOpenEndedAnswer(question);
   optionsContainer.appendChild(btn);
@@ -398,14 +397,15 @@ function displayTextInputOption(question) {
   
   // Create textarea for student answer
   const textarea = document.createElement('textarea');
-  textarea.className = 'w-full px-4 py-3 border-2 border-amber-300 rounded-lg focus:outline-none focus:border-amber-700 text-amber-950 resize-none';
+  textarea.className = 'w-full px-4 py-3 border-2 border-blue-500/50 rounded-lg focus:outline-none focus:border-blue-400 text-slate-900 bg-gray-100 resize-none transition-all';
   textarea.placeholder = 'Ilagay ang iyong sagot dito...';
   textarea.rows = 4;
   textarea.id = 'studentAnswer';
   
   // Create submit button
   const submitBtn = document.createElement('button');
-  submitBtn.className = 'option-btn w-full bg-amber-700 border-2 border-amber-800 hover:bg-amber-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-amber-50 transition-all mt-2';
+  submitBtn.className = 'option-btn w-full bg-blue-700 border-2 border-blue-600 hover:bg-blue-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-white transition-all mt-2';
+  submitBtn.style.boxShadow = '0 0 15px rgba(59, 130, 246, 0.4)';
   submitBtn.textContent = 'Ipasa ang Sagot';
   submitBtn.onclick = () => submitTextAnswer(question, textarea);
   
@@ -622,7 +622,8 @@ function endQuiz() {
   sendToGoogleSheets(studentInfo);
 
   const restartBtn = document.createElement('button');
-  restartBtn.className = 'w-full bg-gradient-to-r from-amber-800 to-amber-900 hover:from-amber-900 hover:to-amber-950 text-amber-50 font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
+  restartBtn.className = 'w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
+  restartBtn.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.4)';
   restartBtn.textContent = 'Subukan Muli';
   restartBtn.onclick = () => location.reload();
   optionsContainer.appendChild(restartBtn);
