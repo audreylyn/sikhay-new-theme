@@ -49,6 +49,20 @@ const headerScore = document.getElementById('headerScore');
 
 let synth = window.speechSynthesis;
 
+// Helper function to format date as readable string
+function formatDateTime(date) {
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  };
+  return date.toLocaleString('en-US', options);
+}
+
 // Access Code Handler
 function checkAccessCode() {
   const enteredCode = accessCodeInput.value.trim().toUpperCase();
@@ -93,7 +107,7 @@ function checkAccessCode() {
     studentInfo.yearSection = yearSection;
     studentInfo.email = studentEmail;
     studentInfo.accessCode = enteredCode;
-    studentInfo.startTime = new Date().toISOString();
+    studentInfo.startTime = formatDateTime(new Date());
     
     allowedSections = ACCESS_CODES[enteredCode];
     accessCodeScreen.classList.add('hidden');
@@ -140,7 +154,7 @@ function filterSections() {
   
   // Calculate total questions for filtered sections
   totalQuestions = sections.reduce((sum, section) => sum + section.questions.length, 0);
-  headerScore.textContent = `Score: 0/${totalQuestions}`;
+  headerScore.textContent = `Puntos: 0/${totalQuestions}`;
 }
 
 function startQuiz() {
@@ -545,7 +559,7 @@ function enableAllOptions() {
 }
 
 function updateScore() {
-  headerScore.textContent = `Score: ${score}/${totalQuestions}`;
+  headerScore.textContent = `Puntos: ${score}/${totalQuestions}`;
 }
 
 function endQuiz() {
@@ -553,7 +567,7 @@ function endQuiz() {
   optionsContainer.innerHTML = '';
   
   // Set end time
-  studentInfo.endTime = new Date().toISOString();
+  studentInfo.endTime = formatDateTime(new Date());
   studentInfo.score = score;
   studentInfo.totalQuestions = totalQuestions;
   studentInfo.percentage = ((score / totalQuestions) * 100).toFixed(1);
@@ -562,18 +576,18 @@ function endQuiz() {
   let message = '';
 
   if (percentage >= 90) {
-    message = 'Napakahusay! Excellent work! Perpekto ang iyong pag-unawa!';
-  } else if (percentage >= 75) {
-    message = 'Mahusay! Very good! Mataas ang iyong marka!';
-  } else if (percentage >= 60) {
-    message = 'Mabuti! Good job! Mayroon kang mabuting pag-unawa.';
-  } else {
-    message = 'Kailangan mo pang mag-aral. Keep trying!';
-  }
+      message = 'Napakagaling! Perpekto ang iyong pag-unawa sa aralin!';
+    } else if (percentage >= 75) {
+      message = 'Mahusay! Lubos mong naunawaan ang mga pangunahing konsepto!';
+    } else if (percentage >= 60) {
+      message = 'Mabuti! Ipagpatuloy ang pag-aaral upang lalong humusay.';
+    } else {
+      message = 'Kailangan pa ng kaunting pagsasanay. Balikan ang aralin at subukan muli!';
+    }
 
-  addBotMessage(`Quiz complete! Your score: ${score}/${totalQuestions} (${percentage}%)`);
+  addBotMessage(`Tapos na ang pagsusulit! Ang iyong iskor: ${score}/${totalQuestions} (${percentage}%)`);
   addBotMessage(message);
-  // speakText(`Quiz complete! Your score: ${score} out of ${totalQuestions}`); // Voice disabled
+  // speakText(`Tapos na ang pagsusulit! Ang iyong iskor: ${score} out of ${totalQuestions}`); // Voice disabled
   
   // Log student data for Google Sheets integration (you can see this in browser console)
   console.log('Student Quiz Data for Google Sheets:', studentInfo);
@@ -583,7 +597,7 @@ function endQuiz() {
 
   const restartBtn = document.createElement('button');
   restartBtn.className = 'w-full bg-gradient-to-r from-amber-800 to-amber-900 hover:from-amber-900 hover:to-amber-950 text-amber-50 font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
-  restartBtn.textContent = 'Subukan Muli / Restart Quiz';
+  restartBtn.textContent = 'Subukan Muli';
   restartBtn.onclick = () => location.reload();
   optionsContainer.appendChild(restartBtn);
 }
@@ -601,7 +615,7 @@ function speakText(text) {
 
 // Google Sheets Integration
 // IMPORTANT: Replace this URL with your own Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrosvgFSwjqIZw2zTbGfg_b_XybR2sbhbdTnh7GmYtCO7WjSKpw6GaPdYE6bsZo3G0tg/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxka6m1xeutkB_M6VpHatLNRUbX5Ws7-YwP3AFtobOlXAwl6htOSMcyoTUJ_Z5XaSE2aA/exec';
 
 async function sendToGoogleSheets(data) {
   try {

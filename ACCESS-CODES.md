@@ -35,7 +35,7 @@
 - Score is calculated based on the sections included
 
 ## Features:
-✅ Section-specific scoring (e.g., "Score: 3/5" for PRETEST)
+✅ Section-specific scoring (e.g., "Puntos3/5" for PRETEST)
 ✅ Dynamic question counting
 ✅ All section types supported (multiple choice, open-ended, fill-in-blank)
 ✅ Same quiz experience, just filtered by access code

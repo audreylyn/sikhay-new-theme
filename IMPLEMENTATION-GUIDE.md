@@ -24,7 +24,7 @@ All text has been translated to Filipino:
 - "Enter Quiz" → "Magsimula"
 
 ### 3. **Updated Score Display**
-- Changed from "Score: 0/18" to "Score: 0/24" to reflect the new total
+- Changed from "Puntos0/18" to "Puntos0/24" to reflect the new total
 
 ---
 

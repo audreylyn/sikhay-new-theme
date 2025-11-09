@@ -237,7 +237,7 @@ function disableAllOptions() {
 }
 
 function updateScore() {
-  headerScore.textContent = `Score: ${score}/${questions.length}`;
+  headerScore.textContent = `Puntos${score}/${questions.length}`;
 }
 
 function endQuiz() {
@@ -252,14 +252,14 @@ function endQuiz() {
     ? 'Maganda ang iyong gawain!'
     : 'Subukan muli at pag-aralan ang aralin nang mabuti!';
 
-  addBotMessage(`🎉 Quiz complete! Your score: ${score}/${questions.length} (${percentage}%)`);
+  addBotMessage(`🎉 Tapos na ang pagsusulit! Ang iyong iskor: ${score}/${questions.length} (${percentage}%)`);
   addBotMessage(message);
-  speakText(`Quiz complete! Your score: ${score} out of ${questions.length}`);
+  speakText(`Tapos na ang pagsusulit! Ang iyong iskor: ${score} ay ${questions.length}`);
 
   sendResults(score, questions.length);
 
   setTimeout(() => {
-    startBtn.textContent = 'Restart Quiz';
+    startBtn.textContent = 'Subukan Muli';
     startBtn.style.display = 'block';
   }, 2000);
 }
@@ -275,7 +275,7 @@ function speakText(text) {
 
 function sendResults(finalScore, totalQuestions) {
   const resultsData = {
-    score: finalScore,
+    Puntos: finalScore,
     total: totalQuestions,
     percentage: Math.round((finalScore / totalQuestions) * 100),
     timestamp: new Date().toISOString(),
