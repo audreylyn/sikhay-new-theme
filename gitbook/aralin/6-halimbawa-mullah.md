@@ -355,7 +355,7 @@ Pagkatapos basahin ang mga anekdota ni Mullah, tanungin ang sarili:
 
 Panoorin ang video na ito tungkol sa kwento ni Mullah Nassreddin:
 
-{% embed url="https://www.youtube.com/watch?v=1-hYdihOEqI" %}
+{% embed url="https://www.youtube.com/watch?v=gdmIuBqOjHM" %}
 
 _(Note: Hanapin sa YouTube ang "Mullah Nassreddin stories" o "Nasreddin Hodja" para sa maraming interpretasyon)_
 
