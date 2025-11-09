@@ -55,7 +55,7 @@ Subukan ang inyong natutuhan sa pamamagitan ng aming interactive quiz!
 
 ---
 
-**Quiz Website:** [SIKHAY Quiz System](https://messenger-quiz-app.vercel.app/)
+**Quiz Website:** [SIKHAY Quiz System](https://sikhay-quiz-website.vercel.app/)
 
 ---
 
@@ -72,7 +72,7 @@ Subukan ang inyong natutuhan sa pamamagitan ng aming interactive quiz!
 | `SIKHAY` | Kumpletong Quiz (Lahat ng seksyon) | 24 tanong |
 
 **Paano Gamitin:**
-1. Bisitahin ang [SIKHAY Quiz System](https://messenger-quiz-app.vercel.app/)
+1. Bisitahin ang [SIKHAY Quiz System](https://sikhay-quiz-website.vercel.app/)
 2. Ilagay ang inyong buong pangalan, baitang/pangkat, at email
 3. Ilagay ang **Access Code** na ibinigay ng inyong guro
 4. Klik sa "Magsimula" at simulan ang quiz!

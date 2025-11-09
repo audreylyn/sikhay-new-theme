@@ -18,7 +18,7 @@ Ang sistema ay may built-in **SIKHAY Bot** - isang AI assistant na gagabay sa in
 
 ### Hakbang 1: Pumunta sa Website
 
-**Quiz Website:** [https://messenger-quiz-app.vercel.app/](https://messenger-quiz-app.vercel.app/)
+**Quiz Website:** [https://sikhay-quiz-website.vercel.app/](https://sikhay-quiz-website.vercel.app/)
 
 *(Tandaan: I-bookmark ang link na ito para madaling ma-access!)*
 
@@ -253,7 +253,7 @@ Kung may problema kayo sa:
 
 **Simulan ang Quiz Ngayon!**
 
-[Pumunta sa SIKHAY Quiz System →](https://messenger-quiz-app.vercel.app/)
+[Pumunta sa SIKHAY Quiz System →](https://sikhay-quiz-website.vercel.app/)
 
 ---
 
