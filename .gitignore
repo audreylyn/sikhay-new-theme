@@ -26,6 +26,9 @@ dist-ssr
 # Environment variables
 .env
 
+# Backup folder
+unused/
+
 # Documentation files (keep in repo but not for deployment tracking)
 ACCESS-CODES.md
 ADDING-NEW-TOPICS-GUIDE.md
