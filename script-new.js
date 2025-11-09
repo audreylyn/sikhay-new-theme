@@ -139,6 +139,11 @@ function initializeQuiz() {
     .then(data => {
       allSections = data;
       startBtn.addEventListener('click', startQuiz);
+      // Add touch support for mobile devices
+      startBtn.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        startQuiz();
+      });
     })
     .catch(error => console.error('Error loading questions:', error));
 }
