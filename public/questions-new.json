@@ -66,27 +66,27 @@
     "title": "ACTIVITY: \"ANEK-SURI!\"",
     "instruction": "Panuto: Basahin ang sumusunod na anekdota. Pagkatapos, sagutin ang mga gabay na tanong sa iyong sagutang papel o sa chat.",
     "story": {
-      "title": "\"Ang Alaga ni Mang Kiko\"",
-      "content": "Si Mang Kiko, isang retiradong karpintero, ay laging may dala-dalang maliit na kahon ng mga kagamitang pangkarpinterya. Isang hapon, may nakita siyang batang nag-aaral magbisikleta sa kanilang kalye. Nahulog ang bata at napigtalan ang kadena ng kanyang bisikleta. Walang nagawa ang ama ng bata. Dali-daling lumapit si Mang Kiko, inilapag ang kanyang kahon, at sa loob lamang ng ilang minuto ay naayos niya ito gamit ang kanyang mga kasangkapan. \"Salamat po, Mang Kiko!\" sabi ng batang masaya. Ngumiti lamang si Mang Kiko at sabi, \"Ang isang tao, kahit retirado na, ay may silbi pa rin kapag may dala-dalang kakayahan.\""
+      "title": "\"Ang Tsinelas\" - Anekdota ni Jose Rizal",
+      "content": "Maganda ang dagat at ang ilog sa aming bayan sa Laguna. Bughaw na may halong luntian kapag walang sigwa. Ang tubig sa wawa ay napapaligiran ng mga kawayang sumasayaw na tila umiindak kapag nahihipan ng hangin. Ang mga bangkang may layag ay parang mga paru-parong puti na naghahabulan. Ang bangka ay karaniwang gawa sa kahoy na inukit sa matibay na kahoy na nakukuha sa aming gubat. Kung minsan ito ay may dalawang katig na gawa sa matitibay at mahabang kawayan upang ang bangka ay hindi gumiwang kapag ito ay nakatigil sa tubig. Karamihan sa gamit nito ay pangingisda nguni't sa aming lalawigan, ang ay ginagamit namin sa paglalakbay lalo na sa pagtawid sa ibayo ng dagat. Mas mabilis ito kaysa gumamit ng kalabaw o ng karetela. Naalala ko pa noon kasalukuyang kaming nakasakay sa bangka nang humulagpos ang isa kong tsinelas. Ang tsinelas ay ang gamit namin sa pagpasok at pagpunta sa mga lakaran kung saan ang bakya na gawa sa kahoy ay hindi nararapat. Mabilis itong inanod sa tubig bago ko nahabol para kunin. Malungkot ako dahil iniisip ko ang aking ina na magagalit dahil sa pagkawala ng aking tsinelas. Tiningnan ako ng nagsasagwan nang kinuha ko ang aking isa pang tsinelas at dali dali kong itinapon sa dagat, kasama ang dasal na mahabol nito ang kapares na tsinelas. \"Bakit mo itinapon ang iyong isa pang tsinelas?\" tanong sa akin ng kasamahan ko sa bangka. \"Isang tsinelas ang nawala sa akin at walang silbi sa makakakita. Ang isang tsinelas na nasa akin ay wala ring silbi sa akin. Kung sino man ang makakuha ng pares ng tsinelas ay magagamit niya ito sa kaniyang paglakad.\" Napatingin ulit sa akin ang mama. Marahil naunawaan niya ang isang batang katulad ko."
     },
     "questions": [
       {
         "id": 6,
-        "question": "Pagsusuri sa Tauhan: Ano ang mga katangian ni Mang Kiko na inilahad sa anekdota? Paano siya naging simbolo ng isang mabuting Pilipino?",
+        "question": "Pagsusuri sa Tauhan: Ano ang mga katangian ng batang si Jose Rizal na inilahad sa anekdota? Paano niya ipinakita ang karunungan sa murang edad?",
         "type": "open-ended",
-        "answer": "Si Mang Kiko ay inilarawan bilang matulungin, mapagbigay, may malasakit sa kapwa, at mahusay sa kanyang gawain (retiradong karpintero). Siya ay naging simbolo ng isang mabuting Pilipino sa pamamagitan ng pagpapakita ng bayanihan at pakikipagkapwa-tao, na handang tumulong kahit kanino sa abot ng kanyang makakaya."
+        "answer": "Ang batang Jose Rizal ay ipinakitang matalino, mapag-isip, at mapagbigay. Sa kabila ng kanyang pagkabata, naipakita niya ang malalim na pag-unawa sa konsepto ng kapaki-pakinabang at pakikipagkapwa. Ang kanyang desisyon na itapon ang natitirang tsinelas ay nagpapakita ng kanyang kakayahang mag-isip nang praktikal at may malasakit sa iba."
       },
       {
         "id": 7,
-        "question": "Pagsusuri sa Motibo ng Awtor: Ano kaya ang nais iparating ng awtor sa mambabasa tungkol sa pagtanda at pagiging kapaki-pakinabang?",
+        "question": "Pagsusuri sa Motibo ng Awtor: Ano ang nais iparating ni Rizal sa mambabasa tungkol sa pagbibigay at kawalan ng pagiging makasarili?",
         "type": "open-ended",
-        "answer": "Nais iparating ng awtor na ang pagtanda ay hindi hadlang upang maging kapaki-pakinabang sa lipunan. Ang mga retirado ay puno pa rin ng karunungan at kakayahan na maaari nilang ibahagi."
+        "answer": "Nais iparating ni Rizal na ang tunay na pagbibigay ay hindi lamang tungkol sa materyal na bagay kundi sa pag-iisip kung paano makakatulong sa iba kahit sa simpleng paraan. Ipinapakita niya na ang pagkakaroon ng malawak na pag-iisip at kawalan ng pagiging makasarili ay mahalaga, kahit pa tayo ay may mawawala."
       },
       {
         "id": 8,
-        "question": "Pagsusuri sa Paraan ng Pagsulat: Paano ginamit ng awtor ang pangyayari (pagkasira ng bisikleta) upang maikintal ang aral sa buhay?",
+        "question": "Pagsusuri sa Paraan ng Pagsulat: Paano ginamit ni Rizal ang paglalarawan ng kapaligiran (dagat, bangka) upang higit na maging mabisa ang kwento?",
         "type": "open-ended",
-        "answer": "Ginamit ng awtor ang isang pangkaraniwan at kongkretong pangyayari (pagkasira ng bisikleta) upang maipakita kung paano ang isang simpleng gawa ng pagtulong ay maaaring magturo ng isang malalim na aral tungkol sa pagkakaroon ng silbi at dignidad sa anumang edad."
+        "answer": "Ginamit ni Rizal ang detalyadong paglalarawan ng Laguna—ang dagat, ilog, kawayan, at bangka—upang bigyang-buhay ang kwento at ipakita ang ganda ng Pilipinas. Ang mga paglalarawang ito ay nagbibigay ng konteksto at kulay sa pangyayari, na nagiging mas makatotohanan at nakaka-engganyong basahin ang kwento."
       }
     ]
   },
