@@ -138,12 +138,24 @@ function initializeQuiz() {
     .then(response => response.json())
     .then(data => {
       allSections = data;
-      startBtn.addEventListener('click', startQuiz);
-      // Add touch support for mobile devices
-      startBtn.addEventListener('touchend', (e) => {
+      
+      // Make sure button is enabled and clickable
+      startBtn.disabled = false;
+      startBtn.style.pointerEvents = 'auto';
+      
+      // Add click event
+      startBtn.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         startQuiz();
       });
+      
+      // Add touch support for mobile devices
+      startBtn.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        startQuiz();
+      }, { passive: false });
     })
     .catch(error => console.error('Error loading questions:', error));
 }
