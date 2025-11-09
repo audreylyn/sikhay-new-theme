@@ -547,8 +547,12 @@ function checkAnswer(selectedOption, selectedText) {
   } else {
     wrongAttempts++;
     
-    if (wrongAttempts < 3) {
-      addBotMessage(`ANEK DAW? Subukan muli! Balikan at suriin pang mabuti ang aralin. (${wrongAttempts}/3)`);
+    // Check if current section is PRETEST - only PRETEST gets 3 attempts
+    const isPretest = section.section === 'PRETEST';
+    const maxAttempts = isPretest ? 3 : 1;
+    
+    if (wrongAttempts < maxAttempts) {
+      addBotMessage(`ANEK DAW? Subukan muli! Balikan at suriin pang mabuti ang aralin. (${wrongAttempts}/${maxAttempts})`);
       // speakText('Subukan muli!'); // Voice disabled
       answered = false;
       enableAllOptions();
