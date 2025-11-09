@@ -109,6 +109,11 @@ function checkAccessCode() {
     studentInfo.accessCode = enteredCode;
     studentInfo.startTime = formatDateTime(new Date());
     
+    // Save student info to localStorage for future sessions (except access code)
+    localStorage.setItem('sikhay_student_name', studentName);
+    localStorage.setItem('sikhay_student_yearSection', yearSection);
+    localStorage.setItem('sikhay_student_email', studentEmail);
+    
     allowedSections = ACCESS_CODES[enteredCode];
     accessCodeScreen.classList.add('hidden');
     quizContainer.classList.remove('hidden');
@@ -658,5 +663,32 @@ async function sendToGoogleSheets(data) {
   }
 }
 
+// Load saved student information on page load
+function loadSavedStudentInfo() {
+  const savedName = localStorage.getItem('sikhay_student_name');
+  const savedYearSection = localStorage.getItem('sikhay_student_yearSection');
+  const savedEmail = localStorage.getItem('sikhay_student_email');
+  
+  if (savedName) {
+    studentNameInput.value = savedName;
+  }
+  
+  if (savedYearSection) {
+    yearSectionInput.value = savedYearSection;
+  }
+  
+  if (savedEmail) {
+    studentEmailInput.value = savedEmail;
+  }
+  
+  // Always focus on access code if fields are prefilled
+  if (savedName && savedYearSection && savedEmail) {
+    accessCodeInput.focus();
+  }
+}
+
 // Initialize on load
-window.addEventListener('DOMContentLoaded', initializeQuiz);
+window.addEventListener('DOMContentLoaded', () => {
+  initializeQuiz();
+  loadSavedStudentInfo();
+});
