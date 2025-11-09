@@ -85,7 +85,7 @@ Mayroon tayong iba't ibang paraan upang masukat ang inyong natutuhan:
 Handa na ba kayong subukan ang inyong unang kaalaman sa anekdota?
 
 **Gawin ang Pre-test:**
-1. Pumunta sa [SIKHAY Quiz System](https://your-deployment-url.com)
+1. Pumunta sa [SIKHAY Quiz System](https://messenger-quiz-app.vercel.app/)
 2. Ilagay ang Access Code: **`SIKHAY-PRETEST`**
 3. Sagutin ang 5 tanong tungkol sa anekdota
 
