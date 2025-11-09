@@ -134,7 +134,7 @@ accessCodeInput.addEventListener('keypress', (e) => {
 let allSections = []; // Store all sections from JSON
 
 function initializeQuiz() {
-  fetch('questions-new.json')
+  fetch('/questions-new.json')
     .then(response => response.json())
     .then(data => {
       allSections = data;
