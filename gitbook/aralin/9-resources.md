@@ -538,7 +538,7 @@ Magpatuloy sa pagbabasa, pag-aaral, at pagsusuri. Ang mundo ay puno ng mga kwent
 
 Handa ka na ba para sa final assessment?
 
-Bisitahin ang [SIKHAY Quiz Website](https://your-deployment-url.com) at gamitin ang iyong access codes:
+Bisitahin ang [SIKHAY Quiz Website](https://messenger-quiz-app.vercel.app/) at gamitin ang iyong access codes:
 
 - **SIKHAY-POSTTEST** - Para sa final assessment
 - **SIKHAY-ALL** - Para sa comprehensive review
