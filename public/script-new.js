@@ -613,6 +613,19 @@ function endQuiz() {
 
   addBotMessage(`Tapos na ang pagsusulit! Ang iyong iskor: ${score}/${totalQuestions} (${percentage}%)`);
   addBotMessage(message);
+  
+  setTimeout(() => {
+    addBotMessage('Pagbati, mahusay na mag-aaral! Matapos mong sagutan ang lahat ng gawaing ito, tiyak na mas handa ka nang sumuri ng iba\'t ibang anekdota at unawain ang mas malalalim na kahulugan ng mga ito.');
+    
+    setTimeout(() => {
+      addBotMessage('Patuloy na magbasa, mag-isip, at magsuri!');
+      
+      setTimeout(() => {
+        addBotMessage('Hanggang sa ating susunod na pag-aaral.');
+      }, 1500);
+    }, 1500);
+  }, 1500);
+  
   // speakText(`Tapos na ang pagsusulit! Ang iyong iskor: ${score} out of ${totalQuestions}`); // Voice disabled
   
   // Log student data for Google Sheets integration (you can see this in browser console)
