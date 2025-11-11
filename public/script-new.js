@@ -12,6 +12,7 @@ let allowedSections = []; // Will store which sections to show based on access c
 let studentInfo = {
   name: '',
   yearSection: '',
+  gender: '',
   email: '',
   accessCode: '',
   startTime: '',
@@ -37,6 +38,7 @@ const quizContainer = document.getElementById('quizContainer');
 const accessCodeInput = document.getElementById('accessCode');
 const studentNameInput = document.getElementById('studentName');
 const yearSectionInput = document.getElementById('yearSection');
+const genderInput = document.getElementById('gender');
 const studentEmailInput = document.getElementById('studentEmail');
 const submitAccessCodeBtn = document.getElementById('submitAccessCode');
 const accessError = document.getElementById('accessError');
@@ -68,6 +70,7 @@ function checkAccessCode() {
   const enteredCode = accessCodeInput.value.trim().toUpperCase();
   const studentName = studentNameInput.value.trim();
   const yearSection = yearSectionInput.value.trim();
+  const gender = genderInput.value.trim();
   const studentEmail = studentEmailInput.value.trim();
   
   // Validate all fields
@@ -82,6 +85,13 @@ function checkAccessCode() {
     accessError.textContent = 'Pakilagay ang iyong taon at seksyon.';
     accessError.classList.remove('hidden');
     yearSectionInput.focus();
+    return;
+  }
+  
+  if (!gender) {
+    accessError.textContent = 'Pakilagay ang iyong kasarian.';
+    accessError.classList.remove('hidden');
+    genderInput.focus();
     return;
   }
   
@@ -105,6 +115,7 @@ function checkAccessCode() {
     // Store student information
     studentInfo.name = studentName;
     studentInfo.yearSection = yearSection;
+    studentInfo.gender = gender;
     studentInfo.email = studentEmail;
     studentInfo.accessCode = enteredCode;
     studentInfo.startTime = formatDateTime(new Date());
@@ -112,6 +123,7 @@ function checkAccessCode() {
     // Save student info to localStorage for future sessions (except access code)
     localStorage.setItem('sikhay_student_name', studentName);
     localStorage.setItem('sikhay_student_yearSection', yearSection);
+    localStorage.setItem('sikhay_student_gender', gender);
     localStorage.setItem('sikhay_student_email', studentEmail);
     
     allowedSections = ACCESS_CODES[enteredCode];
@@ -321,13 +333,15 @@ function addBotMessage(text) {
 function addUserMessage(text) {
   const messageDiv = document.createElement('div');
   messageDiv.className = 'user-bubble flex gap-2 justify-end';
+  
+  // Get gender-specific avatar
+  const avatarSrc = studentInfo.gender === 'female' ? '/female.png' : '/male.png';
+  
   messageDiv.innerHTML = `
     <div class="bg-blue-600 border-2 border-blue-500 rounded-lg rounded-tr-none p-3 sm:p-4 max-w-[75%] sm:max-w-md text-white shadow-lg" style="box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);">
       <p class="text-sm sm:text-base">${text}</p>
     </div>
-    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-green-600 to-green-800 flex-shrink-0 flex items-center justify-center text-white text-sm sm:text-base font-bold shadow-lg" style="box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);">
-      U
-    </div>
+    <img src="${avatarSrc}" alt="User Avatar" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex-shrink-0 shadow-lg object-cover" style="box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);">
   `;
   chatContainer.appendChild(messageDiv);
   chatContainer.scrollTop = chatContainer.scrollHeight;
@@ -725,6 +739,7 @@ async function sendToGoogleSheets(data) {
 function loadSavedStudentInfo() {
   const savedName = localStorage.getItem('sikhay_student_name');
   const savedYearSection = localStorage.getItem('sikhay_student_yearSection');
+  const savedGender = localStorage.getItem('sikhay_student_gender');
   const savedEmail = localStorage.getItem('sikhay_student_email');
   
   if (savedName) {
@@ -735,12 +750,16 @@ function loadSavedStudentInfo() {
     yearSectionInput.value = savedYearSection;
   }
   
+  if (savedGender) {
+    genderInput.value = savedGender;
+  }
+  
   if (savedEmail) {
     studentEmailInput.value = savedEmail;
   }
   
   // Always focus on access code if fields are prefilled
-  if (savedName && savedYearSection && savedEmail) {
+  if (savedName && savedYearSection && savedGender && savedEmail) {
     accessCodeInput.focus();
   }
 }
