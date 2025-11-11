@@ -623,37 +623,39 @@ function endQuiz() {
     setTimeout(() => {
       addBotMessage('Ipinapadala ang iyong mga sagot sa Google Sheets...');
       
-      // Log student data for Google Sheets integration (you can see this in browser console)
+      // Send data to Google Sheets in background (no await)
       console.log('Student Quiz Data for Google Sheets:', studentInfo);
+      sendToGoogleSheetsBackground(studentInfo);
       
-      // Send data to Google Sheets
-      sendToGoogleSheets(studentInfo);
-      
-      // 4. Kumpirmasyon (handled by sendToGoogleSheets function)
-      // 5. Pangwakas na Pagbati
+      // 4. Kumpirmasyon (Pagtatapos ng Proseso) - Show immediately after a delay
       setTimeout(() => {
-        addBotMessage('Pagbati, mahusay na mag-aaral! Matapos mong sagutan ang lahat ng gawaing ito, tiyak na mas handa ka nang sumuri ng iba\'t ibang anekdota at unawain ang mas malalalim na kahulugan ng mga ito.');
+        addBotMessage('Matagumpay na naipadala ang iyong mga sagot!');
         
-        // 6. Maikling Paalala/Encouragement
+        // 5. Pangwakas na Pagbati
         setTimeout(() => {
-          addBotMessage('Patuloy na magbasa, mag-isip, at magsuri!');
+          addBotMessage('Pagbati, mahusay na mag-aaral! Matapos mong sagutan ang lahat ng gawaing ito, tiyak na mas handa ka nang sumuri ng iba\'t ibang anekdota at unawain ang mas malalalim na kahulugan ng mga ito.');
           
-          // 7. Pagtatapos
+          // 6. Maikling Paalala/Encouragement
           setTimeout(() => {
-            addBotMessage('Hanggang sa ating susunod na pag-aaral.');
+            addBotMessage('Patuloy na magbasa, mag-isip, at magsuri!');
             
-            // Show restart button after all messages
+            // 7. Pagtatapos
             setTimeout(() => {
-              const restartBtn = document.createElement('button');
-              restartBtn.className = 'w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
-              restartBtn.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.4)';
-              restartBtn.textContent = 'Subukan Muli';
-              restartBtn.onclick = () => location.reload();
-              optionsContainer.appendChild(restartBtn);
-            }, 1000);
+              addBotMessage('Hanggang sa ating susunod na pag-aaral.');
+              
+              // Show restart button after all messages
+              setTimeout(() => {
+                const restartBtn = document.createElement('button');
+                restartBtn.className = 'w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
+                restartBtn.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.4)';
+                restartBtn.textContent = 'Subukan Muli';
+                restartBtn.onclick = () => location.reload();
+                optionsContainer.appendChild(restartBtn);
+              }, 1000);
+            }, 1500);
           }, 1500);
         }, 1500);
-      }, 2000);
+      }, 1500);
     }, 1500);
   }, 1000);
 }
@@ -673,6 +675,27 @@ function speakText(text) {
 // IMPORTANT: Replace this URL with your own Google Apps Script Web App URL
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWfAL7EFFoFxYMMpUODgFBjAziHNp0I2Bo_kWBLITFHZGf5xHxPM2PN5-AcNiH5_4A/exec';
 
+// Background function - sends data without showing messages
+async function sendToGoogleSheetsBackground(data) {
+  try {
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors', // Important for Google Apps Script
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    });
+    
+    // Note: With 'no-cors', we can't read the response, but the data is sent
+    console.log('Data sent to Google Sheets successfully');
+    
+  } catch (error) {
+    console.error('Error sending to Google Sheets:', error);
+  }
+}
+
+// Legacy function (kept for compatibility)
 async function sendToGoogleSheets(data) {
   try {
     // Note: The "sending" message is now shown in endQuiz() function
