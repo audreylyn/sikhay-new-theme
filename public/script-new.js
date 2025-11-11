@@ -611,35 +611,51 @@ function endQuiz() {
       message = 'Kailangan pa ng kaunting pagsasanay. Balikan ang aralin at subukan muli!';
     }
 
+  // 1. Pag-anunsyo ng Iskor
   addBotMessage(`Tapos na ang pagsusulit! Ang iyong iskor: ${score}/${totalQuestions} (${percentage}%)`);
-  addBotMessage(message);
   
+  // 2. Paggawad ng Papuri (batay sa iskor)
   setTimeout(() => {
-    addBotMessage('Pagbati, mahusay na mag-aaral! Matapos mong sagutan ang lahat ng gawaing ito, tiyak na mas handa ka nang sumuri ng iba\'t ibang anekdota at unawain ang mas malalalim na kahulugan ng mga ito.');
+    addBotMessage(message);
+    // speakText(`Tapos na ang pagsusulit! Ang iyong iskor: ${score} out of ${totalQuestions}`); // Voice disabled
     
+    // 3. Notipikasyon (Pagsisimula ng Proseso)
     setTimeout(() => {
-      addBotMessage('Patuloy na magbasa, mag-isip, at magsuri!');
+      addBotMessage('Ipinapadala ang iyong mga sagot sa Google Sheets...');
       
+      // Log student data for Google Sheets integration (you can see this in browser console)
+      console.log('Student Quiz Data for Google Sheets:', studentInfo);
+      
+      // Send data to Google Sheets
+      sendToGoogleSheets(studentInfo);
+      
+      // 4. Kumpirmasyon (handled by sendToGoogleSheets function)
+      // 5. Pangwakas na Pagbati
       setTimeout(() => {
-        addBotMessage('Hanggang sa ating susunod na pag-aaral.');
-      }, 1500);
+        addBotMessage('Pagbati, mahusay na mag-aaral! Matapos mong sagutan ang lahat ng gawaing ito, tiyak na mas handa ka nang sumuri ng iba\'t ibang anekdota at unawain ang mas malalalim na kahulugan ng mga ito.');
+        
+        // 6. Maikling Paalala/Encouragement
+        setTimeout(() => {
+          addBotMessage('Patuloy na magbasa, mag-isip, at magsuri!');
+          
+          // 7. Pagtatapos
+          setTimeout(() => {
+            addBotMessage('Hanggang sa ating susunod na pag-aaral.');
+            
+            // Show restart button after all messages
+            setTimeout(() => {
+              const restartBtn = document.createElement('button');
+              restartBtn.className = 'w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
+              restartBtn.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.4)';
+              restartBtn.textContent = 'Subukan Muli';
+              restartBtn.onclick = () => location.reload();
+              optionsContainer.appendChild(restartBtn);
+            }, 1000);
+          }, 1500);
+        }, 1500);
+      }, 2000);
     }, 1500);
-  }, 1500);
-  
-  // speakText(`Tapos na ang pagsusulit! Ang iyong iskor: ${score} out of ${totalQuestions}`); // Voice disabled
-  
-  // Log student data for Google Sheets integration (you can see this in browser console)
-  console.log('Student Quiz Data for Google Sheets:', studentInfo);
-  
-  // Send data to Google Sheets
-  sendToGoogleSheets(studentInfo);
-
-  const restartBtn = document.createElement('button');
-  restartBtn.className = 'w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
-  restartBtn.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.4)';
-  restartBtn.textContent = 'Subukan Muli';
-  restartBtn.onclick = () => location.reload();
-  optionsContainer.appendChild(restartBtn);
+  }, 1000);
 }
 
 // Voice/Speech function (DISABLED - Uncomment to enable)
@@ -659,8 +675,7 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWfAL7EFFoFx
 
 async function sendToGoogleSheets(data) {
   try {
-    // Show sending message
-    addBotMessage('Ipinapadala ang iyong mga sagot sa Google Sheets...');
+    // Note: The "sending" message is now shown in endQuiz() function
     
     const response = await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
@@ -673,6 +688,8 @@ async function sendToGoogleSheets(data) {
     
     // Note: With 'no-cors', we can't read the response, but the data is sent
     console.log('Data sent to Google Sheets successfully');
+    
+    // 4. Kumpirmasyon (Pagtatapos ng Proseso)
     addBotMessage('Matagumpay na naipadala ang iyong mga sagot!');
     
   } catch (error) {
