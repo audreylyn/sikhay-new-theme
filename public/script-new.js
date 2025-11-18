@@ -648,7 +648,7 @@ function endQuiz() {
         
         // 5. Pangwakas na Pagbati
         setTimeout(() => {
-          addBotMessage('Pagbati, mahusay na mag-aaral! Matapos mong sagutan ang lahat ng gawaing ito, tiyak na mas handa ka nang sumuri ng iba\'t ibang anekdota at unawain ang mas malalalim na kahulugan ng mga ito.');
+          addBotMessage('Pagbati, muhasay na mag-aaral! Lubos akong natutuwa sa iyong ipinamalas na galing');
           
           // 6. Maikling Paalala/Encouragement
           setTimeout(() => {
