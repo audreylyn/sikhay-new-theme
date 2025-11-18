@@ -270,5 +270,122 @@
         "correct": "b"
       }
     ]
+  },
+  {
+    "section": "EPIKO",
+    "title": "EPIKO",
+    "instruction": "Panuto: Basahing mabuti ang bawat tanong o pahayag. Piliin ang pinakatumpak na sagot mula sa mga pagpipilian.",
+    "questions": [
+      {
+        "id": 25,
+        "question": "Tulang pasalaysay na nagsasaad ng kabayanihan ng pangunahing tauhan na nagtataglay ng katangiang nakahihigit sa karaniwang tao na kadalasan ay buhat sa lipi ng mga diyos at diyosa.",
+        "options": {
+          "a": "Alamat",
+          "b": "Korido",
+          "c": "Mitolohiya",
+          "d": "Epiko"
+        },
+        "correct": "d"
+      },
+      {
+        "id": 26,
+        "question": "Saan nagmula ang Epikong Sundiata: Ang Sinaunang Mali?",
+        "options": {
+          "a": "Espanya",
+          "b": "Europa",
+          "c": "Africa",
+          "d": "Plipinas"
+        },
+        "correct": "c"
+      },
+      {
+        "id": 27,
+        "question": "Sino ang ina ni Maghan Sundiata (Mari Djata)?",
+        "options": {
+          "a": "Sassouma Bérété",
+          "b": "Sogolon Kadjou",
+          "c": "Inang Reyna",
+          "d": "isang mahiwagang mangangaso"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 28,
+        "question": "Sino ang unang asawa ni Haring Maghan Kon Fatta na naging ina ni Dankaran Touma?",
+        "options": {
+          "a": "Sogolon Kadjou",
+          "b": "Sassouma Bérété",
+          "c": "Inang Reyna",
+          "d": "isang mahiwagang babae"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 29,
+        "question": "Pagkamatay ng hari, sino ang hinirang na tagapagmana ng trono?",
+        "options": {
+          "a": "Maghan Sundiata",
+          "b": "Dankaran Touma",
+          "c": "ang mahiwagang mangangaso",
+          "d": "walang hinirang"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 30,
+        "question": "Ang matinding pangdudusta ni Sassouma Bérété kay Sogolon ay hindi lamang nagdulot ng panandaliang hinagpis. Ano ang pinakamalaking pagbabago sa damdamin at pag-uugali ni Sogolon na ipinakita sa teksto bilang resulta ng pangyayaring ito?",
+        "options": {
+          "a": "Naging mapagpatawad at tahimik na lamang siya.",
+          "b": "Ang kanyang pagtitiis ay napalitan ng galit at desperasyon, na nagtulak sa kanya upang saktan ang kanyang anak.",
+          "c": "Lalo siyang naging matatag at ipinagmalaki ang kanyang anak.",
+          "d": "Nagpasya siyang lumayo nang mag-isa at iwan ang kanyang pamilya."
+        },
+        "correct": "b"
+      },
+      {
+        "id": 31,
+        "question": "Bago at pagkatapos ng pangyayari sa dahon ng baobab, nagkaroon ng malaking pagbabago sa damdamin ni Mari Djata. Aling pahayag ang pinakamainam na naglalarawan ng transpormasyong ito?",
+        "options": {
+          "a": "Mula sa isang walang pakialam na bata tungo sa isang determinadong indibidwal na handang ipagtanggol ang dangal ng kanyang ina.",
+          "b": "Mula sa isang mapagmahal na anak tungo sa isang galit na mandirigma.",
+          "c": "Mula sa isang duwag na bata tungo sa isang mapanghamon na lider.",
+          "d": "Mula sa isang malungkot na bata tungo sa isang masayahing tao."
+        },
+        "correct": "a"
+      },
+      {
+        "id": 32,
+        "question": "Ang reaksyon ni Sogolon nang hampasin ang kanyang anak ay nagpapakita ng isang halo-halong damdamin. Ano ang pinakamalapit na paglalarawan sa komplikadong emosyong ito?",
+        "options": {
+          "a": "Pagmamalaki at pag-asa para sa kinabukasan ng anak.",
+          "b": "Pag-ibig at matinding panghihinayang sa sariling kapalaran.",
+          "c": "Matinding pagmamahal at pagsisisi na humahalo sa galit at pagkadismaya.",
+          "d": "Pagkatakot at pagseselos sa kapalaran ng iba."
+        },
+        "correct": "c"
+      },
+      {
+        "id": 33,
+        "question": "Batay sa matinis na halakhak ni Sassouma Bérété, ano ang maaaring pinakamalalim na damdamin na nag-uudyok sa kanyang paghamak kay Sogolon?",
+        "options": {
+          "a": "Takot na maagaw ng mag-ina ni Sundiata ang trono para sa kanyang sariling anak.",
+          "b": "Simpleng pagnanais na maging masaya at kontento sa kanyang buhay.",
+          "c": "Malalim na kawalang-kasiyahan sa kanyang sariling buhay bilang reyna.",
+          "d": "Matinding inggit at paninibugho sa propesiya at sa potensyal na kapangyarihan ni Sundiata."
+        },
+        "correct": "d"
+      },
+      {
+        "id": 34,
+        "question": "Ang pangyayari sa dahon ng baobab ay nagsilbing 'turning point' o sukdulan sa kwento. Paano naging instrumento ang matinding damdamin ni Sogolon upang wakasan ang matagal na paghihirap at pananahimik ng kanyang pamilya?",
+        "options": {
+          "a": "Ang kanyang pag-iyak ay humikayat sa mga tao na tulungan sila.",
+          "b": "Ang kanyang panghahampas kay Mari Djata ang direktang nagpagaling sa kanya.",
+          "c": "Ang kanyang paghikbi at pagsisisi ang naging hudyat para magmilagro.",
+          "d": "Ang kanyang pagwawala at pagsigaw ng kanyang hinanakit ang naging huling straw na nagtulak kay Mari Djata upang magpasya at kumilos para baguhin ang kanilang kapalaran."
+        },
+        "correct": "d"
+      }
+    ]
   }
 ]

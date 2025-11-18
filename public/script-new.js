@@ -30,7 +30,8 @@ const ACCESS_CODES = {
   'SIKHAY-APPLICATION': ['APPLICATION'],
   'SIKHAY-POSTTEST': ['POST-TEST'],
   'SIKHAY-PRE-POST': ['PRETEST', 'POST-TEST'], // Combined
-  'SIKHAY-ALL': 'all' // Alternative for all sections
+  'SIKHAY-ALL': 'all', // Alternative for all sections
+  'SIKHAY-EPIKO': ['EPIKO'] // Epiko section only
 };
 
 const accessCodeScreen = document.getElementById('accessCodeScreen');
