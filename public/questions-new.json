@@ -2,389 +2,346 @@
   {
     "section": "PRETEST",
     "title": "PRETEST",
-    "instruction": "Panuto: Piliin ang pinakatamang sagot batay sa pangunahing kaalaman sa anekdota.",
+    "instruction": "Panuto: Piliin ang pinakatamang sagot batay sa pangunahing kaalaman sa El Filibusterismo.",
     "questions": [
       {
         "id": 1,
-        "question": "Ano ang isang anekdota?",
+        "question": "Sino ang sumulat ng El Filibusterismo?",
         "options": {
-          "a": "Isang mahabang tula tungkol sa pag-ibig",
-          "b": "Isang maikling kwentong naglalaman ng aral o karanasan",
-          "c": "Isang siyentipikong ulat tungkol sa mga hayop",
-          "d": "Isang awitin tungkol sa kalikasan"
+          "a": "Andres Bonifacio",
+          "b": "Jose Rizal",
+          "c": "Apolinario Mabini",
+          "d": "Emilio Aguinaldo"
         },
         "correct": "b"
       },
       {
         "id": 2,
-        "question": "Sino ang karaniwang tauhan sa isang anekdota?",
+        "question": "Ano ang El Filibusterismo sa Filipino?",
         "options": {
-          "a": "Mga superhero at mga kontrabida",
-          "b": "Mga hayop na nagsasalarawan ng mga tao",
-          "c": "Mga totoong tao o batay sa totoong tao",
-          "d": "Mga engkantada at diwata"
+          "a": "Ang Paghihimagsik",
+          "b": "Ang Paghahari",
+          "c": "Ang Kataksilan",
+          "d": "Ang Pag-ibig"
         },
-        "correct": "c"
+        "correct": "a"
       },
       {
         "id": 3,
-        "question": "Ano ang karaniwang layunin ng isang anekdota?",
+        "question": "Sino ang pangunahing tauhan ng El Filibusterismo?",
         "options": {
-          "a": "Magbigay ng komedya at pagtawa",
-          "b": "Magturo ng aral o magbigay-inspirasyon",
-          "c": "Mag-ulat ng mga kasaysayan ng bansa",
-          "d": "Magbenta ng mga produkto"
+          "a": "Crisostomo Ibarra",
+          "b": "Simoun",
+          "c": "Padre Damaso",
+          "d": "Elias"
         },
         "correct": "b"
       },
       {
         "id": 4,
-        "question": "Alin sa mga sumusunod ang halimbawa ng paksa ng anekdota?",
+        "question": "Ang El Filibusterismo ay karugtong ng aling nobela?",
         "options": {
-          "a": "Mga planeta at bituin",
-          "b": "Mga mathematical formula",
-          "c": "Pagmamahal sa pamilya at kapwa",
-          "d": "Mga makina at teknolohiya"
+          "a": "Florante at Laura",
+          "b": "Ibong Adarna",
+          "c": "Noli Me Tangere",
+          "d": "Mga Anak ng Lupa"
         },
         "correct": "c"
       },
       {
         "id": 5,
-        "question": "Sa anong elemento ng anekdota matatagpuan ang lugar at panahon ng pangyayari?",
+        "question": "Saan unang inilathala ang El Filibusterismo?",
         "options": {
-          "a": "Tauhan",
-          "b": "Tagpuan",
-          "c": "Banghay",
-          "d": "Mensahe"
+          "a": "Pilipinas",
+          "b": "Espanya",
+          "c": "Germany",
+          "d": "Belgium (Ghent)"
         },
-        "correct": "b"
+        "correct": "d"
       }
     ]
   },
   {
-    "section": "ACTIVITY",
-    "title": "ACTIVITY: \"ANEK-SURI!\"",
-    "instruction": "Panuto: Basahin ang sumusunod na anekdota. Pagkatapos, sagutin ang mga gabay na tanong sa iyong sagutang papel o sa chat.",
-    "story": {
-      "title": "\"Ang Tsinelas\" - Anekdota ni Jose Rizal",
-      "content": "Maganda ang dagat at ang ilog sa aming bayan sa Laguna. Bughaw na may halong luntian kapag walang sigwa. Ang tubig sa wawa ay napapaligiran ng mga kawayang sumasayaw na tila umiindak kapag nahihipan ng hangin. Ang mga bangkang may layag ay parang mga paru-parong puti na naghahabulan. Ang bangka ay karaniwang gawa sa kahoy na inukit sa matibay na kahoy na nakukuha sa aming gubat. Kung minsan ito ay may dalawang katig na gawa sa matitibay at mahabang kawayan upang ang bangka ay hindi gumiwang kapag ito ay nakatigil sa tubig. Karamihan sa gamit nito ay pangingisda nguni't sa aming lalawigan, ang ay ginagamit namin sa paglalakbay lalo na sa pagtawid sa ibayo ng dagat. Mas mabilis ito kaysa gumamit ng kalabaw o ng karetela. Naalala ko pa noon kasalukuyang kaming nakasakay sa bangka nang humulagpos ang isa kong tsinelas. Ang tsinelas ay ang gamit namin sa pagpasok at pagpunta sa mga lakaran kung saan ang bakya na gawa sa kahoy ay hindi nararapat. Mabilis itong inanod sa tubig bago ko nahabol para kunin. Malungkot ako dahil iniisip ko ang aking ina na magagalit dahil sa pagkawala ng aking tsinelas. Tiningnan ako ng nagsasagwan nang kinuha ko ang aking isa pang tsinelas at dali dali kong itinapon sa dagat, kasama ang dasal na mahabol nito ang kapares na tsinelas. \"Bakit mo itinapon ang iyong isa pang tsinelas?\" tanong sa akin ng kasamahan ko sa bangka. \"Isang tsinelas ang nawala sa akin at walang silbi sa makakakita. Ang isang tsinelas na nasa akin ay wala ring silbi sa akin. Kung sino man ang makakuha ng pares ng tsinelas ay magagamit niya ito sa kaniyang paglakad.\" Napatingin ulit sa akin ang mama. Marahil naunawaan niya ang isang batang katulad ko."
-    },
+    "section": "KABANATA1",
+    "title": "KABANATA 1: Sa Ibabaw ng Kubyerta",
+    "instruction": "Panuto: Batay sa Kabanata 1 ng El Filibusterismo, sagutin ang mga sumusunod na tanong.",
     "questions": [
       {
         "id": 6,
-        "question": "Pagsusuri sa Tauhan: Ano ang mga katangian ng batang si Jose Rizal na inilahad sa anekdota? Paano niya ipinakita ang karunungan sa murang edad?",
-        "type": "open-ended",
-        "answer": "Ang batang Jose Rizal ay ipinakitang matalino, mapag-isip, at mapagbigay. Sa kabila ng kanyang pagkabata, naipakita niya ang malalim na pag-unawa sa konsepto ng kapaki-pakinabang at pakikipagkapwa. Ang kanyang desisyon na itapon ang natitirang tsinelas ay nagpapakita ng kanyang kakayahang mag-isip nang praktikal at may malasakit sa iba."
+        "question": "Ano ang pangalan ng bapor na sinasakyan ng mga tauhan sa Kabanata 1?",
+        "options": {
+          "a": "Tabo",
+          "b": "Lipa",
+          "c": "Espadaña",
+          "d": "Laguna"
+        },
+        "correct": "a"
       },
       {
         "id": 7,
-        "question": "Pagsusuri sa Motibo ng Awtor: Ano ang nais iparating ni Rizal sa mambabasa tungkol sa pagbibigay at kawalan ng pagiging makasarili?",
-        "type": "open-ended",
-        "answer": "Nais iparating ni Rizal na ang tunay na pagbibigay ay hindi lamang tungkol sa materyal na bagay kundi sa pag-iisip kung paano makakatulong sa iba kahit sa simpleng paraan. Ipinapakita niya na ang pagkakaroon ng malawak na pag-iisip at kawalan ng pagiging makasarili ay mahalaga, kahit pa tayo ay may mawawala."
+        "question": "Sino ang misteryosong manlalakbay na nakasakay sa bapor?",
+        "options": {
+          "a": "Basilio",
+          "b": "Isagani",
+          "c": "Simoun",
+          "d": "Padre Sibyla"
+        },
+        "correct": "c"
       },
       {
         "id": 8,
-        "question": "Pagsusuri sa Paraan ng Pagsulat: Paano ginamit ni Rizal ang paglalarawan ng kapaligiran (dagat, bangka) upang higit na maging mabisa ang kwento?",
-        "type": "open-ended",
-        "answer": "Ginamit ni Rizal ang detalyadong paglalarawan ng Laguna—ang dagat, ilog, kawayan, at bangka—upang bigyang-buhay ang kwento at ipakita ang ganda ng Pilipinas. Ang mga paglalarawang ito ay nagbibigay ng konteksto at kulay sa pangyayari, na nagiging mas makatotohanan at nakaka-engganyong basahin ang kwento."
-      }
-    ]
-  },
-  {
-    "section": "ANALISIS",
-    "title": "ANALISIS",
-    "instruction": "Panuto: Batay sa iyong mga sagot sa ACTIVITY, sagutin ang mga sumusunod na katanungan.",
-    "questions": [
+        "question": "Ano ang katangian ni Simoun na agad napansin ng mga tauhan?",
+        "options": {
+          "a": "Ang kanyang matangkad na pangangatawan",
+          "b": "Ang kanyang asul na salamin sa mata",
+          "c": "Ang kanyang maputing buhok",
+          "d": "Ang kanyang malaking sombrero"
+        },
+        "correct": "b"
+      },
       {
         "id": 9,
-        "question": "Paano nagiging mas epektibo ang paghahatid ng mensahe ng isang anekdota kumpara sa isang direktang paglalahad ng aral?",
+        "question": "Ano ang pinag-uusapan ng mga pasahero sa bapor?",
         "options": {
-          "a": "Mas mabilis itong basahin at unawain.",
-          "b": "Gumagamit ito ng emosyon at konkretong halimbawa kaya mas tumatatak sa isipan.",
-          "c": "Mas mahaba at mas detalyado ito.",
-          "d": "May mga larawan at kulay ito."
+          "a": "Ang eleksyon sa bayan",
+          "b": "Ang kapangyarihan at impluwensya ni Simoun",
+          "c": "Ang bagong simbahan sa Maynila",
+          "d": "Ang presyo ng mga bilihin"
         },
         "correct": "b"
       },
       {
         "id": 10,
-        "question": "Bakit mahalagang suriin ang motibo ng awtor sa pag-unawa sa anekdota?",
+        "question": "Saan papunta ang bapor na Tabo?",
         "options": {
-          "a": "Upang malaman kung sino ang awtor.",
-          "b": "Upang matukoy ang tunay na mensahe at layunin ng kanyang isinulat.",
-          "c": "Upang mabilang ang mga salitang ginamit.",
-          "d": "Lahat ng nabanggit"
+          "a": "Maynila",
+          "b": "Cavite",
+          "c": "Laguna",
+          "d": "Batangas"
         },
-        "correct": "b"
-      },
-      {
-        "id": 11,
-        "question": "Paano naiiba ang paggamit ng tauhan sa isang anekdota kumpara sa isang maikling kuwento?",
-        "options": {
-          "a": "Sa anekdota, ang tauhan ay kathang-isip lamang.",
-          "b": "Sa anekdota, ang tauhan ay karaniwang totoong tao o batay sa totoong tao upang bigyang-diin ang pagiging makatotohanan ng aral.",
-          "c": "Sa maikling kuwento, laging bida ang tauhan",
-          "d": "Walang pinagkaiba ang paggamit ng tauhan sa dalawa."
-        },
-        "correct": "b"
+        "correct": "c"
       }
     ]
   },
   {
-    "section": "ABSTRACT",
-    "title": "ABSTRACT",
-    "instruction": "Panuto: Buuin ang pangungusap sa pamamagitan ng pagpili ng pinakaangkop na salita mula sa kahon.",
-    "wordBank": ["paksa", "tauhan", "motibo", "paraan", "tagpuan"],
-    "context": "Ang pagsusuri ng isang anekdota ay hindi lamang pag-unawa sa kwento kundi paghulagway sa mas malalim na kahulugan nito.",
+    "section": "KABANATA2",
+    "title": "KABANATA 2: Sa Ibaba ng Kubyerta",
+    "instruction": "Panuto: Batay sa Kabanata 2 ng El Filibusterismo, sagutin ang mga sumusunod na tanong.",
     "questions": [
       {
+        "id": 11,
+        "question": "Sino-sino ang mga estudyanteng nakasakay sa ibaba ng kubyerta?",
+        "options": {
+          "a": "Simoun at Basilio",
+          "b": "Isagani at Basilio",
+          "c": "Padre Camorra at Padre Sibyla",
+          "d": "Quiroga at Ben-Zayb"
+        },
+        "correct": "b"
+      },
+      {
         "id": 12,
-        "question": "Mahalagang kilalanin muna ang (1)________ na gumagabay sa daloy ng pangyayari.",
-        "type": "fill-in-blank",
-        "correct": "tauhan"
+        "question": "Ano ang pangunahing adhikain ng mga estudyante sa kabanatang ito?",
+        "options": {
+          "a": "Magtayo ng sariling negosyo",
+          "b": "Magtayo ng akademya ng Wikang Kastila",
+          "c": "Lumipat ng ibang bansa",
+          "d": "Maging prayle"
+        },
+        "correct": "b"
       },
       {
         "id": 13,
-        "question": "Susunod, tukuyin ang (2) _________o ang sentral na ideya ng akda.",
-        "type": "fill-in-blank",
-        "correct": "paksa"
+        "question": "Sino si Isagani sa nobela?",
+        "options": {
+          "a": "Isang mangangalakal",
+          "b": "Isang prayle",
+          "c": "Isang makata at estudyante",
+          "d": "Isang sundalo"
+        },
+        "correct": "c"
       },
       {
         "id": 14,
-        "question": "Dapat ding alamin ang (3) __________ upang maunawaan kung bakit niya ito isinulat.",
-        "type": "fill-in-blank",
-        "correct": "motibo"
+        "question": "Ano ang saloobin ni Basilio tungkol sa kanilang adhikain?",
+        "options": {
+          "a": "Labis siyang nag-aalala at natatakot",
+          "b": "Walang pakialam siya",
+          "c": "Matatag at determinado siya",
+          "d": "Gusto niyang sumuko agad"
+        },
+        "correct": "c"
       },
       {
         "id": 15,
-        "question": "Isa ring mahalagang elemento ang (4) __________ na maaaring magbigay-konteksto sa kwento.",
-        "type": "fill-in-blank",
-        "correct": "tagpuan"
-      },
-      {
-        "id": 16,
-        "question": "Sa huli, ang (5) ________ ng pagsulat ang nagbibigay-buhay at bisa sa mensahe ng anekdota.",
-        "type": "fill-in-blank",
-        "correct": "paraan"
+        "question": "Ano ang naging papel ng mga prayle sa buhay ng mga estudyante?",
+        "options": {
+          "a": "Tinutulungan nila ang mga estudyante",
+          "b": "Hinaharangan nila ang mga adhikain ng mga estudyante",
+          "c": "Walang pakialam sila sa mga estudyante",
+          "d": "Pinondohan nila ang pag-aaral ng mga estudyante"
+        },
+        "correct": "b"
       }
     ]
   },
   {
-    "section": "APPLICATION",
-    "title": "APPLICATION",
-    "instruction": "Panuto: Batay sa iyong natutunan sa aralin, sagutin ang mga sumusunod na tanong.",
+    "section": "KABANATA3",
+    "title": "KABANATA 3: Mga Alamat",
+    "instruction": "Panuto: Batay sa Kabanata 3 ng El Filibusterismo, sagutin ang mga sumusunod na tanong.",
     "questions": [
       {
-        "id": 17,
-        "question": "Kung ikaw ay sumusulat ng anekdota upang hikayatin ang mga kabataan na magtanong sa klase, sino ang iyong pipiliing tauhan at bakit?",
+        "id": 16,
+        "question": "Ano ang mga alamat na isinalaysay sa kabanatang ito?",
         "options": {
-          "a": "Isang tanyag na scientist na nagsasabing, \"Walang hangal na tanong.\"",
-          "b": "Isang mahiyain na estudyante na naging matagumpay dahil sa pagtatanong.",
-          "c": "Isang guro na nagbibigay ng puntos sa bawat tanong.",
-          "d": "Isang artista na nagsasabing, \"Cool ang magtanong.\""
+          "a": "Alamat ng Pinya at Alamat ng Sampalok",
+          "b": "Alamat ng lawa ng Laguna at kuwento ng mga bayan",
+          "c": "Alamat ng Mayon at Alamat ng Taal",
+          "d": "Alamat ng Maria Makiling at Alamat ng Mariang Sinukuan"
         },
         "correct": "b"
       },
       {
-        "id": 18,
-        "question": "Paano mo gagamitin ang elemento ng tagpuan upang bigyang-diin ang kahalagahan ng pagtulong sa kapwa?",
+        "id": 17,
+        "question": "Sino ang nagsalaysay ng mga alamat sa bapor?",
         "options": {
-          "a": "Isang mamahaling restaurant kung saan nagbigay ng sobrang pagkain.",
-          "b": "Isang basurahan kung saan may natagpuang wallet na puno ng pera.",
-          "c": "Isang bahaing kalsada kung saan nagtutulungan ang mga tao.",
-          "d": "Isang mall kung saan may nagkalat na mga piraso ng papel."
+          "a": "Si Simoun",
+          "b": "Si Padre Sibyla",
+          "c": "Isa sa mga matatandang pasahero",
+          "d": "Si Isagani"
         },
         "correct": "c"
       },
       {
-        "id": 19,
-        "question": "Alin sa mga sumusunod na pahayag ang nagpapakita ng pinakamabisang paraan ng pagsulat ng anekdota?",
+        "id": 18,
+        "question": "Ano ang layunin ng mga alamat sa konteksto ng nobela?",
         "options": {
-          "a": "\"Ang pagtulong ay mabuti. Dapat tayong magtulungan.\"",
-          "b": "\"Si Juan ay tumulong kay Maria. Mabait si Juan.\"",
-          "c": "\"Nakita ni Ana ang batang nahihirapang magbuhat. Dali-dali siyang lumapit at mariing itinaas ang kabilang dulo.\"",
-          "d": "\"Maraming masisipag na mag-aaral sa paaralan.\""
+          "a": "Upang aliwin ang mga pasahero",
+          "b": "Upang ipakita ang mayamang kultura at kasaysayan ng Pilipinas",
+          "c": "Upang turuan ang mga bata",
+          "d": "Upang pahabain lang ang nobela"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 19,
+        "question": "Paano inilarawan ang lawa ng Laguna sa kabanatang ito?",
+        "options": {
+          "a": "Malungkot at mapanglaw",
+          "b": "Maganda at mayaman sa kasaysayan",
+          "c": "Marumi at puno ng basura",
+          "d": "Maliit at walang halaga"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 20,
+        "question": "Ano ang ipinapahiwatig ng mga alamat tungkol sa buhay ng mga Pilipino sa panahon ng Kastila?",
+        "options": {
+          "a": "Masaya at malaya ang buhay ng mga Pilipino",
+          "b": "Mayaman ang lahat ng Pilipino",
+          "c": "Nagdurusa ang mga Pilipino sa ilalim ng pananakop",
+          "d": "Walang epekto ang pananakop sa buhay ng mga Pilipino"
         },
         "correct": "c"
+      }
+    ]
+  },
+  {
+    "section": "KABANATA4",
+    "title": "KABANATA 4: (Paparating Pa)",
+    "instruction": "Panuto: Ang mga tanong para sa kabanatang ito ay malapit nang idagdag. Abangan!",
+    "questions": [
+      {
+        "id": 21,
+        "question": "Placeholder: Ang kabanatang ito ay ina-update pa. Pumili ng kahit anong sagot upang magpatuloy.",
+        "options": {
+          "a": "Sagot A",
+          "b": "Sagot B",
+          "c": "Sagot C",
+          "d": "Sagot D"
+        },
+        "correct": "a"
+      }
+    ]
+  },
+  {
+    "section": "KABANATA5",
+    "title": "KABANATA 5: (Paparating Pa)",
+    "instruction": "Panuto: Ang mga tanong para sa kabanatang ito ay malapit nang idagdag. Abangan!",
+    "questions": [
+      {
+        "id": 22,
+        "question": "Placeholder: Ang kabanatang ito ay ina-update pa. Pumili ng kahit anong sagot upang magpatuloy.",
+        "options": {
+          "a": "Sagot A",
+          "b": "Sagot B",
+          "c": "Sagot C",
+          "d": "Sagot D"
+        },
+        "correct": "a"
       }
     ]
   },
   {
     "section": "POST-TEST",
     "title": "POST-TEST",
-    "instruction": "Panuto: Piliin ang pinakatumpak na sagot batay sa aralin sa pagsusuri ng anekdota.",
+    "instruction": "Panuto: Piliin ang pinakatumpak na sagot batay sa iyong natutunan sa El Filibusterismo.",
     "questions": [
       {
-        "id": 20,
-        "question": "Ano ang pangunahing layunin ng pagsusuri ng isang anekdota batay sa MELC?",
-        "options": {
-          "a": "Upang alamin ang gramatikal na istruktura nito",
-          "b": "Upang mabilang ang bilang ng mga pangungusap",
-          "c": "Upang maunawaan ang mensahe at layunin nito batay sa mga elemento",
-          "d": "Upang isaulo ang buong kwento"
-        },
-        "correct": "c"
-      },
-      {
-        "id": 21,
-        "question": "Alin sa mga sumusunod ang HINDI kabilang sa mga elemento ng anekdota na dapat suriin?",
-        "options": {
-          "a": "Paksa at tauhan",
-          "b": "Tagpuan at motibo ng awtor",
-          "c": "Paraan ng pagsulat",
-          "d": "Presyo ng aklat kung saan ito nalimbag"
-        },
-        "correct": "d"
-      },
-      {
-        "id": 22,
-        "question": "Paano makakatulong ang pagsusuri sa tauhan upang maunawaan ang anekdota?",
-        "options": {
-          "a": "Natutukoy ang mga katangiang nagbibigay-buhay sa mensahe",
-          "b": "Nabibilang ang dami ng tauhan",
-          "c": "Nahuhulaan ang edad ng awtor",
-          "d": "Nakikilala ang pambansang pagkakakilanlan ng tauhan"
-        },
-        "correct": "a"
-      },
-      {
         "id": 23,
-        "question": "Bakit mahalagang suriin ang motibo ng awtor sa isang anekdota?",
+        "question": "Ano ang pangunahing tema ng El Filibusterismo?",
         "options": {
-          "a": "Upang malaman kung magkano ang kinita nito",
-          "b": "Upang matukoy ang tunay na mensahe at intensyon sa pagsulat",
-          "c": "Upang mabatid kung sino ang kaibigan ng awtor",
-          "d": "Upang malaman kung saan isinulat ang anekdota"
+          "a": "Pag-ibig at romansa",
+          "b": "Paghihiganti at rebolusyon",
+          "c": "Paglalakbay at pakikipagsapalaran",
+          "d": "Komedya at pagtawa"
         },
         "correct": "b"
       },
       {
         "id": 24,
-        "question": "Ano ang pinakamahalagang bunga ng maayos na pagsusuri ng anekdota?",
+        "question": "Sino si Simoun sa katotohanan?",
         "options": {
-          "a": "Nagkakaroon ng mataas na marka sa pagsusulit",
-          "b": "Nauunawaan ang kultura at pagpapahalagang nakapaloob dito",
-          "c": "Natatandaan ang lahat ng detalye",
-          "d": "Nakakasagot nang mabilis sa mga tanong"
+          "a": "Isang dayuhang mangangalakal",
+          "b": "Si Crisostomo Ibarra na nagbalik",
+          "c": "Isang heneral ng Kastila",
+          "d": "Isang prayle na nagkukunwari"
         },
         "correct": "b"
-      }
-    ]
-  },
-  {
-    "section": "EPIKO",
-    "title": "EPIKO-POST TEST",
-    "instruction": "Panuto: Basahing mabuti ang bawat tanong o pahayag. Piliin ang pinakatumpak na sagot mula sa mga pagpipilian.",
-    "questions": [
+      },
       {
         "id": 25,
-        "question": "Tulang pasalaysay na nagsasaad ng kabayanihan ng pangunahing tauhan na nagtataglay ng katangiang nakahihigit sa karaniwang tao na kadalasan ay buhat sa lipi ng mga diyos at diyosa.",
+        "question": "Bakit isinulat ni Rizal ang El Filibusterismo?",
         "options": {
-          "a": "Alamat",
-          "b": "Korido",
-          "c": "Mitolohiya",
-          "d": "Epiko"
+          "a": "Para kumita ng pera",
+          "b": "Para maging sikat",
+          "c": "Para ibunyag ang katiwalian at pang-aapi sa Pilipinas",
+          "d": "Para makapaglibang"
         },
-        "correct": "d"
+        "correct": "c"
       },
       {
         "id": 26,
-        "question": "Saan nagmula ang Epikong Sundiata: Ang Sinaunang Mali?",
+        "question": "Ano ang pagkakaiba ng Noli Me Tangere at El Filibusterismo?",
         "options": {
-          "a": "Espanya",
-          "b": "Europa",
-          "c": "Africa",
-          "d": "Plipinas"
+          "a": "Ang Noli ay pang-komedya, ang El Fili ay pang-drama",
+          "b": "Ang Noli ay nagpapakita ng mapayapang paraan, ang El Fili ay nagpapakita ng rebolusyonaryong paraan",
+          "c": "Pareho lang sila, walang pagkakaiba",
+          "d": "Ang Noli ay mas mahaba kaysa El Fili"
         },
-        "correct": "c"
+        "correct": "b"
       },
       {
         "id": 27,
-        "question": "Sino ang ina ni Maghan Sundiata (Mari Djata)?",
+        "question": "Ano ang aral na makukuha sa El Filibusterismo?",
         "options": {
-          "a": "Sassouma Bérété",
-          "b": "Sogolon Kadjou",
-          "c": "Inang Reyna",
-          "d": "isang mahiwagang mangangaso"
-        },
-        "correct": "b"
-      },
-      {
-        "id": 28,
-        "question": "Sino ang unang asawa ni Haring Maghan Kon Fatta na naging ina ni Dankaran Touma?",
-        "options": {
-          "a": "Sogolon Kadjou",
-          "b": "Sassouma Bérété",
-          "c": "Inang Reyna",
-          "d": "isang mahiwagang babae"
-        },
-        "correct": "b"
-      },
-      {
-        "id": 29,
-        "question": "Pagkamatay ng hari, sino ang hinirang na tagapagmana ng trono?",
-        "options": {
-          "a": "Maghan Sundiata",
-          "b": "Dankaran Touma",
-          "c": "ang mahiwagang mangangaso",
-          "d": "walang hinirang"
-        },
-        "correct": "b"
-      },
-      {
-        "id": 30,
-        "question": "Ang matinding pangdudusta ni Sassouma Bérété kay Sogolon ay hindi lamang nagdulot ng panandaliang hinagpis. Ano ang pinakamalaking pagbabago sa damdamin at pag-uugali ni Sogolon na ipinakita sa teksto bilang resulta ng pangyayaring ito?",
-        "options": {
-          "a": "Naging mapagpatawad at tahimik na lamang siya.",
-          "b": "Ang kanyang pagtitiis ay napalitan ng galit at desperasyon, na nagtulak sa kanya upang saktan ang kanyang anak.",
-          "c": "Lalo siyang naging matatag at ipinagmalaki ang kanyang anak.",
-          "d": "Nagpasya siyang lumayo nang mag-isa at iwan ang kanyang pamilya."
-        },
-        "correct": "b"
-      },
-      {
-        "id": 31,
-        "question": "Bago at pagkatapos ng pangyayari sa dahon ng baobab, nagkaroon ng malaking pagbabago sa damdamin ni Mari Djata. Aling pahayag ang pinakamainam na naglalarawan ng transpormasyong ito?",
-        "options": {
-          "a": "Mula sa isang walang pakialam na bata tungo sa isang determinadong indibidwal na handang ipagtanggol ang dangal ng kanyang ina.",
-          "b": "Mula sa isang mapagmahal na anak tungo sa isang galit na mandirigma.",
-          "c": "Mula sa isang duwag na bata tungo sa isang mapanghamon na lider.",
-          "d": "Mula sa isang malungkot na bata tungo sa isang masayahing tao."
-        },
-        "correct": "a"
-      },
-      {
-        "id": 32,
-        "question": "Ang reaksyon ni Sogolon nang hampasin ang kanyang anak ay nagpapakita ng isang halo-halong damdamin. Ano ang pinakamalapit na paglalarawan sa komplikadong emosyong ito?",
-        "options": {
-          "a": "Pagmamalaki at pag-asa para sa kinabukasan ng anak.",
-          "b": "Pag-ibig at matinding panghihinayang sa sariling kapalaran.",
-          "c": "Matinding pagmamahal at pagsisisi na humahalo sa galit at pagkadismaya.",
-          "d": "Pagkatakot at pagseselos sa kapalaran ng iba."
+          "a": "Ang paghihiganti ay laging tama",
+          "b": "Walang pag-asa ang Pilipinas",
+          "c": "Ang tunay na pagbabago ay nagmumula sa edukasyon at pagkakaisa",
+          "d": "Dapat tayong sumunod na lang sa mga nananakop"
         },
         "correct": "c"
-      },
-      {
-        "id": 33,
-        "question": "Batay sa matinis na halakhak ni Sassouma Bérété, ano ang maaaring pinakamalalim na damdamin na nag-uudyok sa kanyang paghamak kay Sogolon?",
-        "options": {
-          "a": "Takot na maagaw ng mag-ina ni Sundiata ang trono para sa kanyang sariling anak.",
-          "b": "Simpleng pagnanais na maging masaya at kontento sa kanyang buhay.",
-          "c": "Malalim na kawalang-kasiyahan sa kanyang sariling buhay bilang reyna.",
-          "d": "Matinding inggit at paninibugho sa propesiya at sa potensyal na kapangyarihan ni Sundiata."
-        },
-        "correct": "d"
-      },
-      {
-        "id": 34,
-        "question": "Ang pangyayari sa dahon ng baobab ay nagsilbing 'turning point' o sukdulan sa kwento. Paano naging instrumento ang matinding damdamin ni Sogolon upang wakasan ang matagal na paghihirap at pananahimik ng kanyang pamilya?",
-        "options": {
-          "a": "Ang kanyang pag-iyak ay humikayat sa mga tao na tulungan sila.",
-          "b": "Ang kanyang panghahampas kay Mari Djata ang direktang nagpagaling sa kanya.",
-          "c": "Ang kanyang paghikbi at pagsisisi ang naging hudyat para magmilagro.",
-          "d": "Ang kanyang pagwawala at pagsigaw ng kanyang hinanakit ang naging huling straw na nagtulak kay Mari Djata upang magpasya at kumilos para baguhin ang kanilang kapalaran."
-        },
-        "correct": "d"
       }
     ]
   }

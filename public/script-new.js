@@ -22,16 +22,16 @@ let studentInfo = {
 
 // Access code mapping
 const ACCESS_CODES = {
-  'SIKHAY': 'all', // All sections
+  'SIKHAY': 'all', // All chapters
+  'SIKHAY-KABANATA1': ['KABANATA1'],
+  'SIKHAY-KABANATA2': ['KABANATA2'],
+  'SIKHAY-KABANATA3': ['KABANATA3'],
+  'SIKHAY-KABANATA4': ['KABANATA4'],
+  'SIKHAY-KABANATA5': ['KABANATA5'],
   'SIKHAY-PRETEST': ['PRETEST'],
-  'SIKHAY-ACTIVITY': ['ACTIVITY'],
-  'SIKHAY-ANALISIS': ['ANALISIS'],
-  'SIKHAY-ABSTRACT': ['ABSTRACT'],
-  'SIKHAY-APPLICATION': ['APPLICATION'],
   'SIKHAY-POSTTEST': ['POST-TEST'],
-  'SIKHAY-PRE-POST': ['PRETEST', 'POST-TEST'], // Combined
-  'SIKHAY-ALL': 'all', // Alternative for all sections
-  'SIKHAY-EPIKO': ['EPIKO'] // Epiko section only
+  'SIKHAY-PRE-POST': ['PRETEST', 'POST-TEST'],
+  'SIKHAY-ALL': 'all' // Alternative for all chapters
 };
 
 const accessCodeScreen = document.getElementById('accessCodeScreen');
@@ -205,7 +205,7 @@ function startQuiz() {
   // Score is now in header, no need to show/hide
   updateScore();
 
-  addBotMessage('Magsimula na tayo! Ang unang seksyon ay paparating na...');
+  addBotMessage('Magsimula na tayo! Ang unang kabanata ay paparating na...');
   setTimeout(() => {
     showSection();
   }, 1500);
@@ -468,7 +468,7 @@ function submitTextAnswer(question, textarea) {
       updateScore();
       
       setTimeout(() => {
-        addBotMessage('ANEK WOW! Matalas ang iyong pagsusuri at pag-unawa sa aralin. Kaya naman magtutungo na tayo sa susunod na katanungan.');
+        addBotMessage('Mahusay! Tumpak ang iyong sagot. Magpatuloy tayo sa susunod na katanungan.');
         
         setTimeout(() => {
           currentQuestionIndex++;
@@ -514,7 +514,7 @@ function showOpenEndedAnswer(question) {
       updateScore();
       
       setTimeout(() => {
-        addBotMessage('ANEK WOW! Tumpak! Matalas ang iyong pagsusuri at pag-unawa sa aralin. Kaya naman magtutungo na tayo sa susunod na katanungan.');
+        addBotMessage('Mahusay! Tumpak! Matalas ang iyong pag-unawa sa aralin. Magpatuloy tayo sa susunod na katanungan.');
         // speakText('Tumpak!'); // Voice disabled
         
         setTimeout(() => {
@@ -552,7 +552,7 @@ function checkAnswer(selectedOption, selectedText) {
   if (isCorrect) {
     score++;
     updateScore();
-    addBotMessage('ANEK WOW! Tumpak! Matalas ang iyong pagsusuri at pag-unawa sa aralin. Kaya naman magtutungo na tayo sa susunod na katanungan.');
+    addBotMessage('Mahusay! Tumpak! Matalas ang iyong pag-unawa sa aralin. Magpatuloy tayo sa susunod na katanungan.');
     // speakText('Tumpak! Correct!'); // Voice disabled
 
     setTimeout(() => {
@@ -567,7 +567,7 @@ function checkAnswer(selectedOption, selectedText) {
     const maxAttempts = isPretest ? 3 : 1;
     
     if (wrongAttempts < maxAttempts) {
-      addBotMessage(`ANEK DAW? Subukan muli! Balikan at suriin pang mabuti ang aralin. (${wrongAttempts}/${maxAttempts})`);
+      addBotMessage(`Hindi tama. Subukan muli! Balikan at suriin pang mabuti ang aralin. (${wrongAttempts}/${maxAttempts})`);
       // speakText('Subukan muli!'); // Voice disabled
       answered = false;
       enableAllOptions();
