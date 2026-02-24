@@ -62,224 +62,436 @@
     ]
   },
   {
-    "section": "KABANATA1",
-    "title": "KABANATA 1: Sa Ibabaw ng Kubyerta",
-    "instruction": "Panuto: Batay sa Kabanata 1 ng El Filibusterismo, sagutin ang mga sumusunod na tanong.",
+    "section": "KABANATA1-2",
+    "title": "KABANATA 1-2: Sa Ibabaw at Ibaba ng Kubyerta",
+    "instruction": "Panuto: Piliin ang tiyak na letra sa bawat tanong.",
     "questions": [
       {
         "id": 6,
-        "question": "Ano ang pangalan ng bapor na sinasakyan ng mga tauhan sa Kabanata 1?",
+        "question": "Ano ang pangunahing simbolismo ng Bapor Tabo sa nobela?",
         "options": {
-          "a": "Tabo",
-          "b": "Lipa",
-          "c": "Espadaña",
-          "d": "Laguna"
+          "a": "Ito ay kawangis ng mabagal at bulok na pamahalaan.",
+          "b": "Ito ay tanda ng kawalan ng disiplina ng mga Pilipino.",
+          "c": "Ito ay representasyon ng korapsyon sa lipunan.",
+          "d": "Ito ay larawan ng pagiging mapag-imbot ng mga prayle."
         },
         "correct": "a"
       },
       {
         "id": 7,
-        "question": "Sino ang misteryosong manlalakbay na nakasakay sa bapor?",
+        "question": "Si Don Custodio ay sumasagisag sa:",
         "options": {
-          "a": "Basilio",
-          "b": "Isagani",
-          "c": "Simoun",
-          "d": "Padre Sibyla"
+          "a": "Kahinaan sa paggawa ng matalinong desisyon.",
+          "b": "Pagiging sunud-sunuran at walang sariling paninindigan.",
+          "c": "Kawalan ng malasakit sa kapakanan ng bayan.",
+          "d": "Katamaran sa pag-iisip ng solusyon."
         },
-        "correct": "c"
+        "correct": "b"
       },
       {
         "id": 8,
-        "question": "Ano ang katangian ni Simoun na agad napansin ng mga tauhan?",
+        "question": "Ano ang kahulugan ng \"pilibustero\" sa konteksto ng kabanata?",
         "options": {
-          "a": "Ang kanyang matangkad na pangangatawan",
-          "b": "Ang kanyang asul na salamin sa mata",
-          "c": "Ang kanyang maputing buhok",
-          "d": "Ang kanyang malaking sombrero"
+          "a": "Taong mapag-alsa at mapanghimagsik.",
+          "b": "Kalaban ng pamahalaan at kaaway ng kapayapaan.",
+          "c": "Indibidwal na mapanganib sa seguridad ng estado.",
+          "d": "Tao na nagpapakalat ng kaguluhan."
         },
         "correct": "b"
       },
       {
         "id": 9,
-        "question": "Ano ang pinag-uusapan ng mga pasahero sa bapor?",
+        "question": "Ang papel ni Ben Zayb sa usapan ay nagpapakita ng:",
         "options": {
-          "a": "Ang eleksyon sa bayan",
-          "b": "Ang kapangyarihan at impluwensya ni Simoun",
-          "c": "Ang bagong simbahan sa Maynila",
-          "d": "Ang presyo ng mga bilihin"
+          "a": "Kawalan ng integridad sa pag-uulat.",
+          "b": "Pagiging kampon ng mga may kapangyarihan.",
+          "c": "Kataksilan sa tungkulin bilang mamamahayag.",
+          "d": "Kabawalan at kawalan ng malalimang pag-iisip."
         },
-        "correct": "b"
+        "correct": "d"
       },
       {
         "id": 10,
-        "question": "Saan papunta ang bapor na Tabo?",
+        "question": "Ano ang ipinahihiwatig ng paghihiwalay sa kubyerta at ilalim ng bapor?",
         "options": {
-          "a": "Maynila",
-          "b": "Cavite",
-          "c": "Laguna",
-          "d": "Batangas"
+          "a": "Kawalan ng pagkakapantay-pantay sa lipunan.",
+          "b": "Pagmamalabis ng mga nasa kapangyarihan.",
+          "c": "Sistemang nagpapanatili ng paghihiwalay ng mga uri.",
+          "d": "Diskriminasyon batay sa katayuan sa buhay."
         },
         "correct": "c"
       }
     ]
   },
   {
-    "section": "KABANATA2",
-    "title": "KABANATA 2: Sa Ibaba ng Kubyerta",
-    "instruction": "Panuto: Batay sa Kabanata 2 ng El Filibusterismo, sagutin ang mga sumusunod na tanong.",
+    "section": "KABANATA6-7",
+    "title": "KABANATA 6-7: Basilio at Simoun",
+    "instruction": "Panuto: Piliin ang tiyak na letra sa bawat tanong.",
     "questions": [
       {
         "id": 11,
-        "question": "Sino-sino ang mga estudyanteng nakasakay sa ibaba ng kubyerta?",
+        "question": "Paano nagpapakita ang alok ni Simoun kay Basilio ng kasapakat sa paghihimagsik ng pagkakataong personal na magbago ang estado ng buhay ng isang tao?",
         "options": {
-          "a": "Simoun at Basilio",
-          "b": "Isagani at Basilio",
-          "c": "Padre Camorra at Padre Sibyla",
-          "d": "Quiroga at Ben-Zayb"
+          "a": "Pinatunayan nito na ang kayamanan at kapangyarihan ang tanging daan sa tagumpay.",
+          "b": "Ipinakita nito na ang mga pagpipilian ay maaaring magdulot ng malaking pagbabago sa kinabukasan ng isang tao.",
+          "c": "Ipinakita nito na ang pakikipagsabwatan ay isang mabisang paraan ng pag-unlad.",
+          "d": "Pinatunayan nito na ang edukasyon ay walang saysay kung walang pera."
         },
-        "correct": "b"
+        "correct": "a"
       },
       {
         "id": 12,
-        "question": "Ano ang pangunahing adhikain ng mga estudyante sa kabanatang ito?",
+        "question": "Ano ang mahihinuha sa pagtanggi ni Basilio na maging kasabwat ni Simoun?",
         "options": {
-          "a": "Magtayo ng sariling negosyo",
-          "b": "Magtayo ng akademya ng Wikang Kastila",
-          "c": "Lumipat ng ibang bansa",
-          "d": "Maging prayle"
+          "a": "Ipinakita nito na ang indibidwal na karera ay mas mahalaga kaysa sa kapakanan ng komunidad.",
+          "b": "Ipinakita nito na ang karahasan ay hindi ang sagot sa mga suliranin ng pamayanan.",
+          "c": "Pinatunayan nito na ang mga propesyonal ay dapat manatiling neutral sa mga isyung panlipunan.",
+          "d": "Ipinakita nito na takot si Basilio sa mga hamon ng pagbabago."
         },
-        "correct": "b"
+        "correct": "a"
       },
       {
         "id": 13,
-        "question": "Sino si Isagani sa nobela?",
+        "question": "Bakit mahalaga ang pagbubunyag ni Simoun ng kanyang tunay na pagkatao bilang si Ibarra?",
         "options": {
-          "a": "Isang mangangalakal",
-          "b": "Isang prayle",
-          "c": "Isang makata at estudyante",
-          "d": "Isang sundalo"
+          "a": "Dahil ipinakita nito ang kahinaan ng mga prayle.",
+          "b": "Dahil pinatunayan nito ang tagumpay ng mga repormista.",
+          "c": "Dahil ipinakita nito ang pagkabigo ng sistema at ang paglitaw ng radikalisadong paghihiganti.",
+          "d": "Dahil pinatunayan nito na ang mga bayani ay maaaring magbalik mula sa kamatayan."
         },
         "correct": "c"
       },
       {
         "id": 14,
-        "question": "Ano ang saloobin ni Basilio tungkol sa kanilang adhikain?",
+        "question": "Anong pandaigdigang tema ang ipinakikita sa paghahandang maghiganti ni Simoun sa gubat?",
         "options": {
-          "a": "Labis siyang nag-aalala at natatakot",
-          "b": "Walang pakialam siya",
-          "c": "Matatag at determinado siya",
-          "d": "Gusto niyang sumuko agad"
+          "a": "Ang pandaigdigang kalakalan ng mga mamahaling bato.",
+          "b": "Ang siklo ng pang-aapi at terorismo bilang resulta ng di-mabuting pamamahala.",
+          "c": "Ang paglaganap ng mga sakit sa iba't ibang bansa.",
+          "d": "Ang pakikipag-ugnayan ng mga bansa sa pamamagitan ng diplomasya."
         },
-        "correct": "c"
+        "correct": "b"
       },
       {
         "id": 15,
-        "question": "Ano ang naging papel ng mga prayle sa buhay ng mga estudyante?",
+        "question": "Kaugnay ng Pagpapahalaga sa Kasalukuyan: Anong aral ang ibinibigay ng kuwento nina Basilio at Simoun sa mga kabataan ngayon?",
         "options": {
-          "a": "Tinutulungan nila ang mga estudyante",
-          "b": "Hinaharangan nila ang mga adhikain ng mga estudyante",
-          "c": "Walang pakialam sila sa mga estudyante",
-          "d": "Pinondohan nila ang pag-aaral ng mga estudyante"
+          "a": "Ang pera ang pinakamahalagang bagay sa mundo.",
+          "b": "Dapat iwasan ang lahat ng anyo ng pakikipag-ugnayan sa mga may problema.",
+          "c": "Ang paghihiganti ay isang mabisang paraan upang malutas ang mga problema.",
+          "d": "Dapat panatilihin ang pag-asa at hanapin ang mapayapang paraan ng pagbabago."
         },
-        "correct": "b"
+        "correct": "d"
       }
     ]
   },
   {
-    "section": "KABANATA3",
-    "title": "KABANATA 3: Mga Alamat",
-    "instruction": "Panuto: Batay sa Kabanata 3 ng El Filibusterismo, sagutin ang mga sumusunod na tanong.",
+    "section": "KABANATA8",
+    "title": "KABANATA 8: Kaisipang Lutang",
+    "instruction": "Panuto: Suriin kung ano ang nais ipahiwatig ng mga kaisipang lutang sa akda. Piliin kung Diyos, Bayan, Kapwa-Tao, o Magulang.",
     "questions": [
       {
         "id": 16,
-        "question": "Ano ang mga alamat na isinalaysay sa kabanatang ito?",
+        "question": "Ang mga kabataan ay masigasig sa kanilang mga balak. Humahanap sila ng mga paraan upang maisakatuparan ang kanilang mga adhika.",
         "options": {
-          "a": "Alamat ng Pinya at Alamat ng Sampalok",
-          "b": "Alamat ng lawa ng Laguna at kuwento ng mga bayan",
-          "c": "Alamat ng Mayon at Alamat ng Taal",
-          "d": "Alamat ng Maria Makiling at Alamat ng Mariang Sinukuan"
+          "a": "Diyos",
+          "b": "Bayan",
+          "c": "Kapwa-Tao",
+          "d": "Magulang"
         },
         "correct": "b"
       },
       {
         "id": 17,
-        "question": "Sino ang nagsalaysay ng mga alamat sa bapor?",
+        "question": "Ang pagpapari ni Padre Florentino dahil sa kagustuhan ng ina ay nagpapakita ng kapangyarihan ng mga magulang sa anak noong unang panahon.",
         "options": {
-          "a": "Si Simoun",
-          "b": "Si Padre Sibyla",
-          "c": "Isa sa mga matatandang pasahero",
-          "d": "Si Isagani"
+          "a": "Diyos",
+          "b": "Bayan",
+          "c": "Kapwa-Tao",
+          "d": "Magulang"
         },
-        "correct": "c"
+        "correct": "d"
       },
       {
         "id": 18,
-        "question": "Ano ang layunin ng mga alamat sa konteksto ng nobela?",
+        "question": "May mga Pilipino ring nagpapahirap sa kapuwa Pilipino.",
         "options": {
-          "a": "Upang aliwin ang mga pasahero",
-          "b": "Upang ipakita ang mayamang kultura at kasaysayan ng Pilipinas",
-          "c": "Upang turuan ang mga bata",
-          "d": "Upang pahabain lang ang nobela"
+          "a": "Diyos",
+          "b": "Bayan",
+          "c": "Kapwa-Tao",
+          "d": "Magulang"
         },
-        "correct": "b"
+        "correct": "c"
       },
       {
         "id": 19,
-        "question": "Paano inilarawan ang lawa ng Laguna sa kabanatang ito?",
+        "question": "Ang paghahanap ni Huli ng salaping inaasahang ibibigay ng Birhen.",
         "options": {
-          "a": "Malungkot at mapanglaw",
-          "b": "Maganda at mayaman sa kasaysayan",
-          "c": "Marumi at puno ng basura",
-          "d": "Maliit at walang halaga"
+          "a": "Diyos",
+          "b": "Bayan",
+          "c": "Kapwa-Tao",
+          "d": "Magulang"
+        },
+        "correct": "a"
+      },
+      {
+        "id": 20,
+        "question": "Sa pamamagitan ng relihiyon at pananampalataya ay nangyayaring mapasunod at masakop tayo nang lubusan.",
+        "options": {
+          "a": "Diyos",
+          "b": "Bayan",
+          "c": "Kapwa-Tao",
+          "d": "Magulang"
+        },
+        "correct": "a"
+      }
+    ]
+  },
+  {
+    "section": "KABANATA9-11",
+    "title": "KABANATA 9-11: Tales, Simoun, at ang mga Prayle",
+    "instruction": "Panuto: Piliin ang tiyak na letra sa bawat tanong.",
+    "questions": [
+      {
+        "id": 21,
+        "question": "Kung ikaw ay nasa katayuan ni Tandang Selo, anong paraan ng paglaban ang maaari mong gawin upang mapanatili ang iyong dignidad nang hindi nagiging sanhi ng karahasan?",
+        "options": {
+          "a": "Makipag-usap sa mga prayle nang mapakumbaba",
+          "b": "Lumikas na lamang sa ibang bayan kasama ang pamilya",
+          "c": "Sumulat ng liham sa hari ng Espanya",
+          "d": "Manatiling tahimik at tanggapin ang lahat ng nangyayari"
         },
         "correct": "b"
       },
       {
-        "id": 20,
-        "question": "Ano ang ipinapahiwatig ng mga alamat tungkol sa buhay ng mga Pilipino sa panahon ng Kastila?",
+        "id": 22,
+        "question": "Paano naging epektibo ang paggamit ni Simoun ng kanyang mga alahas bilang kasangkapan sa pagbabago ng lipunan sa mga kabanatang ito?",
         "options": {
-          "a": "Masaya at malaya ang buhay ng mga Pilipino",
-          "b": "Mayaman ang lahat ng Pilipino",
-          "c": "Nagdurusa ang mga Pilipino sa ilalim ng pananakop",
-          "d": "Walang epekto ang pananakop sa buhay ng mga Pilipino"
+          "a": "Nagbigay ito ng pagkakataong kumita si Hermana Penchang",
+          "b": "Naging instrumento ito upang mahikayat ang mga tao sa kanyang mga balak",
+          "c": "Natulungan nito ang pamilya Tales na makaahon sa kahirapan",
+          "d": "Nagamit ito pambili ng sandata para sa mga tulisan"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 23,
+        "question": "Ano ang mas nangingibabaw na motibo sa mga kilos ng mga prayle sa Kabanata 11: ang pagtulong sa kapwa o ang pagpapanatili ng kanilang kapangyarihan?",
+        "options": {
+          "a": "Ang pagtulong sa kapwa ang pangunahing motibo",
+          "b": "Parehong mahalaga ang dalawang motibo",
+          "c": "Ang pagpapanatili ng kapangyarihan ang mas nangingibabaw",
+          "d": "Wala sa nabanggit ang tama"
         },
         "correct": "c"
+      },
+      {
+        "id": 24,
+        "question": "Kung ang pagiging pipi ni Tandang Selo ay isang metapora, ano ang pinakamahusay na pagkakahulugan nito sa konteksto ng buong kabanata?",
+        "options": {
+          "a": "Kawalan ng talino sa pagsasalita",
+          "b": "Simbolo ng pagiging duwag",
+          "c": "Representasyon ng kawalan ng boses at kapangyarihan ng karaniwang mamamayan",
+          "d": "Tanda ng katandaan at kahinaan"
+        },
+        "correct": "c"
+      },
+      {
+        "id": 25,
+        "question": "Aling sitwasyon sa mga kabanata ang nagpapakita ng pinakamabisang paggamit ng diskarte o estratihiya sa kabila ng kawalan ng kapangyarihan?",
+        "options": {
+          "a": "Ang pagtanggap ni Kabesang Tales kay Simoun sa kanilang tahanan",
+          "b": "Ang pagpilit ni Juli na palayain ang kanyang lolo",
+          "c": "Ang pagdadala ng banda ng musika sa pangangaso",
+          "d": "Ang pagbili ng mga alahas ni Hermana Penchang"
+        },
+        "correct": "b"
       }
     ]
   },
   {
-    "section": "KABANATA4",
-    "title": "KABANATA 4: (Paparating Pa)",
-    "instruction": "Panuto: Ang mga tanong para sa kabanatang ito ay malapit nang idagdag. Abangan!",
+    "section": "KABANATA12-13",
+    "title": "KABANATA 12-13: Pagsusuri at Pagbubuod",
+    "instruction": "Panuto: Piliin ang tiyak na letra sa bawat tanong.",
     "questions": [
       {
-        "id": 21,
-        "question": "Placeholder: Ang kabanatang ito ay ina-update pa. Pumili ng kahit anong sagot upang magpatuloy.",
+        "id": 26,
+        "question": "Ano ang pinakamalaking pagkakamali sa pag-uugnay ng mga pangungusap kung isusulat ang buod ng Kabanata 10?",
         "options": {
-          "a": "Sagot A",
-          "b": "Sagot B",
-          "c": "Sagot C",
-          "d": "Sagot D"
+          "a": "Pagkawala ng lohikal na daloy mula pagdalaw ni Simoun hanggang pagkalimot ni Tales sa pagbalik.",
+          "b": "Hindi pagbanggit ng eksaktong petsa ng mga pangyayari.",
+          "c": "Paggamit ng labis na pang-uri sa paglalarawan ng alahas ni Simoun.",
+          "d": "Hindi pagsama ng lahat ng detalye tungkol sa mga bumili ng alahas."
+        },
+        "correct": "a"
+      },
+      {
+        "id": 27,
+        "question": "Alin sa mga sumusunod ang pinakaepektibong pamamaraan upang pagdugtungin ang buod ng Kabanata 9 at 10?",
+        "options": {
+          "a": "Paglalagay ng subtitle para sa bawat kabanata.",
+          "b": "Paggamit ng transition words na magpapakita ng sanhi at bunga gaya ng \"dahil dito\", \"bilang resulta\".",
+          "c": "Paggamit ng mga pangatnig na \"at saka\", \"tapos\", at \"pagkatapos\".",
+          "d": "Pag-uulit ng mahahalagang pangungusap mula sa naunang kabanata."
+        },
+        "correct": "d"
+      },
+      {
+        "id": 28,
+        "question": "Sa pagsulat ng buod ng Kabanata 11, aling elemento ang dapat bigyan ng pinakamalaking konsiderasyon upang mapanatili ang kaisahan ng talata?",
+        "options": {
+          "a": "Ang sentral na tema ng kapangyarihan at panloloko sa pamahalaan.",
+          "b": "Ang eksaktong halaga ng pustahan ni Simoun sa laro.",
+          "c": "Ang lahat ng pangalan ng mga dumalo sa Los Baños.",
+          "d": "Ang buong proseso ng pangangaso sa Boso-boso."
+        },
+        "correct": "b"
+      },
+      {
+        "id": 29,
+        "question": "Kung may isang mag-aaral na nagsulat ng buod na nagtapos sa \"Si Kabesang Tales ay nawala na\", paano ito maaaring ayusin para maging mas epektibo?",
+        "options": {
+          "a": "Iugnay ito sa mas malawak na tema ng paghihimagsik at pagbabago",
+          "b": "Dagdagan ng maraming detalye kung saan siya nagtungo",
+          "c": "Palitan ng mas emosyonal na salita gaya ng \"naglaho na parang bula\".",
+          "d": "Gumamit ng eksklamasyon point sa huli."
+        },
+        "correct": "c"
+      },
+      {
+        "id": 30,
+        "question": "Alin sa mga sumusunod ang pinakamahalagang sangkap sa mekaniks ng pagsulat na dapat pairalin sa pagsulat ng buod ng tatlong kabanata?",
+        "options": {
+          "a": "Ang paglalagay ng bantas pagkatapos ng bawat tatlong salita.",
+          "b": "Ang paggamit ng malalaking titik sa lahat ng mahahalagang salita.",
+          "c": "Ang wastong paghahati ng mga talata ayon sa eksaktong tagpo.",
+          "d": "Ang pagpapanatili ng pare-parehong tense ng pandiwa sa buong buod."
         },
         "correct": "a"
       }
     ]
   },
   {
-    "section": "KABANATA5",
-    "title": "KABANATA 5: (Paparating Pa)",
-    "instruction": "Panuto: Ang mga tanong para sa kabanatang ito ay malapit nang idagdag. Abangan!",
+    "section": "KABANATA14-15",
+    "title": "KABANATA 14-15: Ang Akademya ng Wikang Kastila",
+    "instruction": "Panuto: Piliin ang tiyak na letra sa bawat tanong.",
     "questions": [
       {
-        "id": 22,
-        "question": "Placeholder: Ang kabanatang ito ay ina-update pa. Pumili ng kahit anong sagot upang magpatuloy.",
+        "id": 31,
+        "question": "Bakit ipinakita ni Pecson ang agam-agam sa plano ng pagtatag ng akademya ng wikang Kastila? Paano ito nag-uugnay sa karanasang pansarili at gawaing pangkomunidad?",
         "options": {
-          "a": "Sagot A",
-          "b": "Sagot B",
-          "c": "Sagot C",
-          "d": "Sagot D"
+          "a": "Dahil natatakot siyang manakit ng damdamin ng iba; nagpapakita ito ng kakulangan sa tiwala sa sarili.",
+          "b": "Dahil nag-aalala siya sa posibleng pagtanggi ni Don Custodio; ipinapakita nito ang responsableng pagharap sa epekto sa komunidad.",
+          "c": "Dahil ayaw niyang makialam sa politika; nagpapakita ito ng kawalan ng malasakit sa bayan.",
+          "d": "Dahil gusto niyang maging bida sa grupo; nagpapakita ito ng pansariling ambisyon."
+        },
+        "correct": "b"
+      },
+      {
+        "id": 32,
+        "question": "Paano ipinakita ni Isagani ang prinsipyo ng marangal na pamamaraan sa pakikipag-ugnayan kay Ginoong Pasta? Ano ang kabuluhan nito sa isyung pambansa?",
+        "options": {
+          "a": "Lumapit siya nang mahinahon at malinaw; nagpapakita ito ng pagpapahalaga sa diplomatikong paraan sa pakikipagtulungan sa gobyerno.",
+          "b": "Pinilit niyang kumbinsihin si Ginoong Pasta sa anumang paraan; ipinapakita nito ang determinasyon sa pambansang adhikain.",
+          "c": "Hindi siya nagpakita ng opinyon; nagpapakita ito ng pagtanggap sa kapangyarihan ng mayayaman.",
+          "d": "Nakiusap sa pamamagitan ng pamimigay ng regalo; nagpapakita ito ng praktikal na solusyon."
         },
         "correct": "a"
+      },
+      {
+        "id": 33,
+        "question": "Ano ang simbolikong ibig sabihin ng pag-alis ni Isagani kay Ginoong Pasta nang may lungkot at pagmumuni-muni? Paano ito nauugnay sa karanasang pansarili at pambansang isyu?",
+        "options": {
+          "a": "Ipinapakita nito ang kabiguan ng kabataan sa kanilang personal na layunin at sa ambisyon na makapaglingkod sa bayan.",
+          "b": "Ipinapakita nito ang pagtalikod sa personal na interes; walang koneksyon sa pambansang isyu.",
+          "c": "Ipinapakita ang simpleng kabataan at kalungkutan; nagpapahiwatig ng kawalan ng tiwala sa sarili.",
+          "d": "Ipinapakita ang tagumpay sa diplomatikong paraan; simbolo ng karanasan sa buhay."
+        },
+        "correct": "a"
+      },
+      {
+        "id": 34,
+        "question": "Paano ipinapakita ng kwento ang ugnayan ng personal na karanasan at gawaing pangkomunidad sa pagtatag ng akademya?",
+        "options": {
+          "a": "Ang bawat karakter ay nag-iisip lamang para sa sarili at hindi para sa grupo.",
+          "b": "Pinapakita ng mga mag-aaral ang pagtutulungan at pagbabahagi ng pananaw upang maisakatuparan ang proyekto para sa ikabubuti ng nakararami.",
+          "c": "Ang plano ay itinatago at lihim na isinasagawa lamang ni Isagani.",
+          "d": "Wala silang pinagkasunduan at nagdesisyon nang paisa-isa."
+        },
+        "correct": "b"
+      },
+      {
+        "id": 35,
+        "question": "Ano ang ipinapahiwatig ng payo ni Ginoong Pasta kay Isagani na magpakasaya na lamang sa personal na buhay? Paano ito nauugnay sa isyung pambansa at pandaigdig?",
+        "options": {
+          "a": "Ipinapakita ang pagtalikod ng mga taong may kapangyarihan sa tunay na layunin ng bayan; ito ay representasyon ng korapsyon at kawalan ng malasakit sa lipunan.",
+          "b": "Ipinapakita ang kabutihang-loob ng mayayaman; positibong impluwensya sa lipunan.",
+          "c": "Ipinapakita ang praktikal na paraan upang makapagtagumpay sa personal na buhay; walang kinalaman sa pambansa.",
+          "d": "Ipinapakita ang pagkakaroon ng moralidad sa komunidad; solusyon sa pandaigdigang isyu."
+        },
+        "correct": "a"
+      }
+    ]
+  },
+  {
+    "section": "KABANATA16-17",
+    "title": "KABANATA 16-17: Ang Hapunan at ang Perya",
+    "instruction": "Panuto: Piliin ang tiyak na letra sa bawat tanong.",
+    "questions": [
+      {
+        "id": 36,
+        "question": "Sino ang nagdaos ng hapunan sa Kabanata 16?",
+        "options": {
+          "a": "Simoun",
+          "b": "Quiroga",
+          "c": "Don Custodio",
+          "d": "Padre Camorra"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 37,
+        "question": "Sino ang pinagmamasdan ni Padre Camorra sa perya?",
+        "options": {
+          "a": "Simoun",
+          "b": "Mr. Leeds",
+          "c": "Paulita Gomez",
+          "d": "Quiroga"
+        },
+        "correct": "c"
+      },
+      {
+        "id": 38,
+        "question": "Ano ang inaalok ni Simoun kay Quiroga kapalit ng pagtatago ng armas?",
+        "options": {
+          "a": "Trabaho sa perya",
+          "b": "Libreng hapunan",
+          "c": "Pagkakataong makilala ang prayle",
+          "d": "Pagbaba ng utang ng dalawang libong piso"
+        },
+        "correct": "d"
+      },
+      {
+        "id": 39,
+        "question": "Bakit napilitan si Quiroga na pumayag sa alok ni Simoun?",
+        "options": {
+          "a": "Dahil sa takot at pagkalugi ng negosyo",
+          "b": "Dahil gusto niyang makilala si Simoun",
+          "c": "Para makasali sa perya",
+          "d": "Para makuha ang konsulado ng Tsina"
+        },
+        "correct": "a"
+      },
+      {
+        "id": 40,
+        "question": "Ano ang ipinapakita ng kilos ni Padre Camorra sa perya?",
+        "options": {
+          "a": "Pagmamahal sa bayan",
+          "b": "Makamundong pag-uugali at kawalang malasakit sa kapuwa",
+          "c": "Kabayanihan at karuwagan",
+          "d": "Paninindigan sa sariling prinsipyo"
+        },
+        "correct": "b"
       }
     ]
   },
@@ -289,7 +501,7 @@
     "instruction": "Panuto: Piliin ang pinakatumpak na sagot batay sa iyong natutunan sa El Filibusterismo.",
     "questions": [
       {
-        "id": 23,
+        "id": 41,
         "question": "Ano ang pangunahing tema ng El Filibusterismo?",
         "options": {
           "a": "Pag-ibig at romansa",
@@ -300,7 +512,7 @@
         "correct": "b"
       },
       {
-        "id": 24,
+        "id": 42,
         "question": "Sino si Simoun sa katotohanan?",
         "options": {
           "a": "Isang dayuhang mangangalakal",
@@ -311,7 +523,7 @@
         "correct": "b"
       },
       {
-        "id": 25,
+        "id": 43,
         "question": "Bakit isinulat ni Rizal ang El Filibusterismo?",
         "options": {
           "a": "Para kumita ng pera",
@@ -322,7 +534,7 @@
         "correct": "c"
       },
       {
-        "id": 26,
+        "id": 44,
         "question": "Ano ang pagkakaiba ng Noli Me Tangere at El Filibusterismo?",
         "options": {
           "a": "Ang Noli ay pang-komedya, ang El Fili ay pang-drama",
@@ -333,7 +545,7 @@
         "correct": "b"
       },
       {
-        "id": 27,
+        "id": 45,
         "question": "Ano ang aral na makukuha sa El Filibusterismo?",
         "options": {
           "a": "Ang paghihiganti ay laging tama",
