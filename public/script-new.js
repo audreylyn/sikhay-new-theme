@@ -30,6 +30,10 @@ const ACCESS_CODES = {
   'SIKHAY-KABANATA12-13': ['KABANATA12-13'],
   'SIKHAY-KABANATA14-15': ['KABANATA14-15'],
   'SIKHAY-KABANATA16-17': ['KABANATA16-17'],
+  'SIKHAY-KABANATA24-26': ['KABANATA24-26'],
+  'SIKHAY-KABANATA27-29': ['KABANATA27-29'],
+  'SIKHAY-KABANATA30': ['KABANATA30'],
+  'SIKHAY-KABANATA31-32': ['KABANATA31-32'],
   'SIKHAY-PRETEST': ['PRETEST'],
   'SIKHAY-POSTTEST': ['POST-TEST'],
   'SIKHAY-PRE-POST': ['PRETEST', 'POST-TEST'],
@@ -70,7 +74,7 @@ function formatDateTime(date) {
 
 // Access Code Handler
 function checkAccessCode() {
-  const enteredCode = accessCodeInput.value.trim().toUpperCase();
+  const enteredCode = accessCodeInput.value.replace(/\s+/g, '').toUpperCase();
   const studentName = studentNameInput.value.trim();
   const yearSection = yearSectionInput.value.trim();
   const gender = genderInput.value.trim();
