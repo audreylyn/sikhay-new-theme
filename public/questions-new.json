@@ -496,12 +496,250 @@
     ]
   },
   {
+    "section": "KABANATA24-26",
+    "title": "KABANATA 24-26: Mga Mag-aaral at ang Akademya",
+    "instruction": "Panuto: Piliin ang tiyak na letra sa bawat tanong.",
+    "questions": [
+      {
+        "id": 41,
+        "question": "Sino ang nangangarap para sa isang paaralan kung saan malayang makapag-aaral ang mga Pilipino nang walang pang-aapi mula sa mga prayle?",
+        "options": {
+          "a": "Basilio",
+          "b": "Isagani",
+          "c": "Macaraig",
+          "d": "Sandoval"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 42,
+        "question": "Ano ang naging dahilan ng pagdiriwang ng mga mag-aaral sa Panciteris Macanista de Buen Gusto?",
+        "options": {
+          "a": "Kaarawan ni Isagani",
+          "b": "Pagwawagi sa kaso laban sa mga prayle",
+          "c": "Pagdating ni Sandoval mula Espanya",
+          "d": "Pagsasara ng Akademya ng Wikang Kastila"
+        },
+        "correct": "d"
+      },
+      {
+        "id": 43,
+        "question": "Sa Kabanata 25, ipinakita ang pagtitipon ng mga mag-aaral kung saan malaya nilang nailahad ang kanilang saloobin. Alin sa mga sumusunod ang nagpapakita ng teoryang humanismo sa bahaging ito?",
+        "options": {
+          "a": "Ang pag-inom at pagkain ng masasarap na pagkain",
+          "b": "Ang pagpapahalaga sa karapatang magpahayag ng damdamin at opinyon",
+          "c": "Ang panggagaya ng mga Pilipino sa mga Kastila",
+          "d": "Ang pagtawa at pagsaya sa kabila ng problema"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 44,
+        "question": "Ipinakita sa Kabanata 26 ang agarang pagdakip sa mga mag-aaral dahil sa mga paskil. Paano ipinaliliwanag ng teoryang naturalistiko ang pangyayaring ito?",
+        "options": {
+          "a": "Likas na sa mga mag-aaral ang magkalat ng paskil",
+          "b": "Ang mapang-aping sistema ng lipunan ang nagtulak sa mga mag-aaral sa ganitong kapalaran",
+          "c": "Kusa na lamang nadakip ang mga mag-aaral dahil sa kanilang kapabayaan",
+          "d": "Ang mga prayle ay likas na mababait ngunit nagkataon lamang na may paskil"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 45,
+        "question": "Kung paghahambingin ang naging pananaw nina Isagani (Kabanata 24) at Simoun sa pagbabago, alin sa mga sumusunod ang wastong paglalarawan?",
+        "options": {
+          "a": "Romantisismo ang kay Isagani dahil naniniwala siya sa mapayapang reporma; realismo naman kay Simoun dahil sa marahas niyang paraan.",
+          "b": "Naturalistiko ang kay Isagani dahil tanggap niya ang kanyang kapalaran; romantisismo naman kay Simoun.",
+          "c": "Realismo ang kay Isagani dahil praktikal siyang mag-isip; naturalistiko naman kay Simoun.",
+          "d": "Humanismo ang kay Isagani dahil sa pag-ibig; romantisismo naman kay Simoun."
+        },
+        "correct": "a"
+      }
+    ]
+  },
+  {
+    "section": "KABANATA27-29",
+    "title": "KABANATA 27-29: Basilio, Juli, at Simoun",
+    "instruction": "Panuto: Piliin ang tiyak na letra sa bawat tanong.",
+    "questions": [
+      {
+        "id": 46,
+        "question": "Sa Kabanata 27, alin sa mga sumusunod ang HINDI nagpapakita ng tunay na motibo ni Padre Camorra sa pagpapatulong kay Juli?",
+        "options": {
+          "a": "Ang pagpapanggap nitong maawaing pari",
+          "b": "Ang paggamit ng relihiyon para takutin si Juli",
+          "c": "Ang pag-alok ng trabaho kay Juli sa kumbento",
+          "d": "Ang pagnanais na mapalapit nang may kahalayan kay Juli"
+        },
+        "correct": "c"
+      },
+      {
+        "id": 47,
+        "question": "Bakit tunay na mapanganib para kay Basilio ang pagpasok sa lihim na samahan sa Kabanata 28?",
+        "options": {
+          "a": "Dahil bawal ito sa paaralan",
+          "b": "Dahil maaari siyang arestuhin ng guardia civil",
+          "c": "Dahil maaaring gamitin siyang instrumento ni Simoun para sa rebolusyong hindi niya lubos na nauunawaan",
+          "d": "Dahil maaaring mawalan siya ng oras sa pag-aaral ng medisina"
+        },
+        "correct": "c"
+      },
+      {
+        "id": 48,
+        "question": "Sa Kabanata 29, paano inihayag ni Simoun kay Basilio ang kanyang tunay na pagkatao?",
+        "options": {
+          "a": "Sa pamamagitan ng pagsusuot ng mga alahas",
+          "b": "Sa pamamagitan ng pagkukuwento tungkol kay Ibarra",
+          "c": "Sa pamamagitan ng pag-iyak at pagtatapat ng kanyang pagkakakilanlan",
+          "d": "Sa pamamagitan ng pagpapakita ng marka sa kanyang katawan"
+        },
+        "correct": "c"
+      },
+      {
+        "id": 49,
+        "question": "Alin sa mga sumusunod ang pangunahing pagkakaiba ng pananaw ni Basilio at ni Simoun tungkol sa paghihiganti?",
+        "options": {
+          "a": "Naniniwala si Basilio sa marahas na paraan samantalang si Simoun ay sa mapayapang paraan",
+          "b": "Naniniwala si Basilio sa pagtupad ng pangarap para sa sarili at kasintahan samantalang si Simoun ay sa pagwasak ng buong sistema",
+          "c": "Pareho silang naniniwala sa rebolusyon ngunit magkaiba lamang ng dahilan",
+          "d": "Mas pinili ni Basilio na magtago samantalang si Simoun ay lumaban nang hayagan"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 50,
+        "question": "Sa kabuuan ng Kabanata 27-29, paano ipinapakita ni Rizal ang unti-unting pagkilos ng mga tauhan tungo sa wakas ng nobela?",
+        "options": {
+          "a": "Sa pamamagitan ng pagpapakasal ng mga pangunahing tauhan",
+          "b": "Sa pamamagitan ng paglalahad ng mga planong magdudulot ng malaking pagbabago at trahedya",
+          "c": "Sa pamamagitan ng pagpapayaman ng mga tauhan",
+          "d": "Sa pamamagitan ng pagpapatawad ng mga tauhan sa isa't isa"
+        },
+        "correct": "b"
+      }
+    ]
+  },
+  {
+    "section": "KABANATA30",
+    "title": "KABANATA 30: Si Juli",
+    "instruction": "Panuto: Piliin ang tiyak na letra sa bawat tanong.",
+    "questions": [
+      {
+        "id": 51,
+        "question": "Ano ang simbolismo ng sinapit ni Juli sa nobela?",
+        "options": {
+          "a": "Pag-asa at tagumpay ng kababaihan sa lipunan",
+          "b": "Pagsasakripisyo ng isang anak para sa kaniyang pamilya",
+          "c": "Kawalang-katarungan at pang-aabuso ng mga nasa kapangyarihan",
+          "d": "Pagbabago at kalayaan ng bayan mula sa dayuhan"
+        },
+        "correct": "c"
+      },
+      {
+        "id": 52,
+        "question": "Ano ang ipinakita ng kabanatang ito tungkol sa kalagayan ng kababaihan noong panahon ng Kastila?",
+        "options": {
+          "a": "Ang mga babae ay may malayang desisyon sa kanilang buhay",
+          "b": "Ang mga babae ay madalas naaapi at walang kakayahang ipagtanggol ang kanilang sarili",
+          "c": "Ang mga babae ay malakas at kayang lumaban sa mga prayleng umaabuso sa kanilang pagkatao",
+          "d": "Ang mga babae ay may pantay na karapatan katulad sa mga kalalakihan"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 53,
+        "question": "Ano ang dahilan ng lalong pagkabagabag ni Huli sa nangyari kay Basilio?",
+        "options": {
+          "a": "Dahil kailanman ay hindi na ito makalalaya pa",
+          "b": "Sapagkat hindi ito magawang tulungan upang makalaya",
+          "c": "Sapagkat nalaman nitong siya at ang kaniyang ama ang dahilan ng kaniyang pagkakakulong",
+          "d": "Dahil nalaman nitong lubos na pinahihirapan si Basilio"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 54,
+        "question": "Ano ang nag-udyok kay Huli para puntahan si Padre Camorra?",
+        "options": {
+          "a": "Upang muling maglingkod sa diyos",
+          "b": "Para pumasok sa simbahan bilang madre",
+          "c": "Upang humingi ng tulong para mahanap si Basilio",
+          "d": "Upang humingi ng tulong para mapalaya sa kulungan si Basilio"
+        },
+        "correct": "c"
+      },
+      {
+        "id": 55,
+        "question": "Ano ang naging reaksyon ni Padre Camorra nang lumapit si Huli sa kaniya?",
+        "options": {
+          "a": "Tinulungan niya agad si Huli",
+          "b": "Sinamantala niya ang kahinaan at kalagayan ni Huli",
+          "c": "Pinagdasal niya si Huli",
+          "d": "Pinalayas at pinagmumura si Huli"
+        },
+        "correct": "b"
+      }
+    ]
+  },
+  {
+    "section": "KABANATA31-32",
+    "title": "KABANATA 31-32: Paghahambing",
+    "instruction": "Panuto: Isulat ang \"P\" kung ang paghahambing sa pangungusap ay magkatulad at \"PD\" kung ang paghahambing ay di-magkatulad. Piliin ang tamang sagot.",
+    "questions": [
+      {
+        "id": 56,
+        "question": "Higit na maraming mag-aaral ang nakilahok sa paligsahan ngayon kaysa nakalipas na taon.",
+        "options": {
+          "a": "P (Magkatulad)",
+          "b": "PD (Di-magkatulad)"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 57,
+        "question": "Si Chester ay kasinggaling ni Danilo sa pagsayaw.",
+        "options": {
+          "a": "P (Magkatulad)",
+          "b": "PD (Di-magkatulad)"
+        },
+        "correct": "a"
+      },
+      {
+        "id": 58,
+        "question": "Ang ani ng mga magsasaka ay mas masagana ngayon kaysa nakaraang taon.",
+        "options": {
+          "a": "P (Magkatulad)",
+          "b": "PD (Di-magkatulad)"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 59,
+        "question": "Di-hamak na malawak ang lupain niya kaysa bukid ni Mang Dionisio.",
+        "options": {
+          "a": "P (Magkatulad)",
+          "b": "PD (Di-magkatulad)"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 60,
+        "question": "Kasimbata ng anak mo ang pamangkin ko.",
+        "options": {
+          "a": "P (Magkatulad)",
+          "b": "PD (Di-magkatulad)"
+        },
+        "correct": "a"
+      }
+    ]
+  },
+  {
     "section": "POST-TEST",
     "title": "POST-TEST",
     "instruction": "Panuto: Piliin ang pinakatumpak na sagot batay sa iyong natutunan sa El Filibusterismo.",
     "questions": [
       {
-        "id": 41,
+        "id": 61,
         "question": "Ano ang pangunahing tema ng El Filibusterismo?",
         "options": {
           "a": "Pag-ibig at romansa",
@@ -512,7 +750,7 @@
         "correct": "b"
       },
       {
-        "id": 42,
+        "id": 62,
         "question": "Sino si Simoun sa katotohanan?",
         "options": {
           "a": "Isang dayuhang mangangalakal",
@@ -523,7 +761,7 @@
         "correct": "b"
       },
       {
-        "id": 43,
+        "id": 63,
         "question": "Bakit isinulat ni Rizal ang El Filibusterismo?",
         "options": {
           "a": "Para kumita ng pera",
@@ -534,7 +772,7 @@
         "correct": "c"
       },
       {
-        "id": 44,
+        "id": 64,
         "question": "Ano ang pagkakaiba ng Noli Me Tangere at El Filibusterismo?",
         "options": {
           "a": "Ang Noli ay pang-komedya, ang El Fili ay pang-drama",
@@ -545,7 +783,7 @@
         "correct": "b"
       },
       {
-        "id": 45,
+        "id": 65,
         "question": "Ano ang aral na makukuha sa El Filibusterismo?",
         "options": {
           "a": "Ang paghihiganti ay laging tama",
