@@ -17,12 +17,12 @@ let studentInfo = {
   accessCode: '',
   startTime: '',
   endTime: '',
-  answers: [] // Will store all answers with questions
+  answers: [], // Will store all answers with questions
 };
 
 // Access code mapping
 const ACCESS_CODES = {
-  'SIKHAY': 'all', // All chapters
+  SIKHAY: 'all', // All chapters
   'SIKHAY-KABANATA1-2': ['KABANATA1-2'],
   'SIKHAY-KABANATA6-7': ['KABANATA6-7'],
   'SIKHAY-KABANATA8': ['KABANATA8'],
@@ -34,10 +34,11 @@ const ACCESS_CODES = {
   'SIKHAY-KABANATA27-29': ['KABANATA27-29'],
   'SIKHAY-KABANATA30': ['KABANATA30'],
   'SIKHAY-KABANATA31-32': ['KABANATA31-32'],
+  'SIKHAY-KABANATA33': ['KABANATA33'],
   'SIKHAY-PRETEST': ['PRETEST'],
   'SIKHAY-POSTTEST': ['POST-TEST'],
   'SIKHAY-PRE-POST': ['PRETEST', 'POST-TEST'],
-  'SIKHAY-ALL': 'all' // Alternative for all chapters
+  'SIKHAY-ALL': 'all', // Alternative for all chapters
 };
 
 const accessCodeScreen = document.getElementById('accessCodeScreen');
@@ -67,7 +68,7 @@ function formatDateTime(date) {
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
-    hour12: true
+    hour12: true,
   };
   return date.toLocaleString('en-US', options);
 }
@@ -79,7 +80,7 @@ function checkAccessCode() {
   const yearSection = yearSectionInput.value.trim();
   const gender = genderInput.value.trim();
   const studentEmail = studentEmailInput.value.trim();
-  
+
   // Validate all fields
   if (!studentName) {
     accessError.textContent = 'Pakilagay ang iyong buong pangalan.';
@@ -87,28 +88,28 @@ function checkAccessCode() {
     studentNameInput.focus();
     return;
   }
-  
+
   if (!yearSection) {
     accessError.textContent = 'Pakilagay ang iyong taon at seksyon.';
     accessError.classList.remove('hidden');
     yearSectionInput.focus();
     return;
   }
-  
+
   if (!gender) {
     accessError.textContent = 'Pakilagay ang iyong kasarian.';
     accessError.classList.remove('hidden');
     genderInput.focus();
     return;
   }
-  
+
   if (!studentEmail) {
     accessError.textContent = 'Pakilagay ang iyong email address.';
     accessError.classList.remove('hidden');
     studentEmailInput.focus();
     return;
   }
-  
+
   // Simple email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(studentEmail)) {
@@ -117,7 +118,7 @@ function checkAccessCode() {
     studentEmailInput.focus();
     return;
   }
-  
+
   if (ACCESS_CODES.hasOwnProperty(enteredCode)) {
     // Store student information
     studentInfo.name = studentName;
@@ -126,18 +127,18 @@ function checkAccessCode() {
     studentInfo.email = studentEmail;
     studentInfo.accessCode = enteredCode;
     studentInfo.startTime = formatDateTime(new Date());
-    
+
     // Save student info to localStorage for future sessions (except access code)
     localStorage.setItem('sikhay_student_name', studentName);
     localStorage.setItem('sikhay_student_yearSection', yearSection);
     localStorage.setItem('sikhay_student_gender', gender);
     localStorage.setItem('sikhay_student_email', studentEmail);
-    
+
     allowedSections = ACCESS_CODES[enteredCode];
     accessCodeScreen.classList.add('hidden');
     quizContainer.classList.remove('hidden');
     accessError.classList.add('hidden');
-    
+
     // Filter sections based on access code
     filterSections();
   } else {
@@ -159,29 +160,33 @@ let allSections = []; // Store all sections from JSON
 
 function initializeQuiz() {
   fetch('/questions-new.json')
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       allSections = data;
-      
+
       // Make sure button is enabled and clickable
       startBtn.disabled = false;
       startBtn.style.pointerEvents = 'auto';
-      
+
       // Add click event
-      startBtn.addEventListener('click', function(e) {
+      startBtn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         startQuiz();
       });
-      
+
       // Add touch support for mobile devices
-      startBtn.addEventListener('touchstart', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        startQuiz();
-      }, { passive: false });
+      startBtn.addEventListener(
+        'touchstart',
+        function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          startQuiz();
+        },
+        { passive: false },
+      );
     })
-    .catch(error => console.error('Error loading questions:', error));
+    .catch((error) => console.error('Error loading questions:', error));
 }
 
 function filterSections() {
@@ -190,11 +195,16 @@ function filterSections() {
     sections = allSections;
   } else {
     // Filter only allowed sections
-    sections = allSections.filter(section => allowedSections.includes(section.section));
+    sections = allSections.filter((section) =>
+      allowedSections.includes(section.section),
+    );
   }
-  
+
   // Calculate total questions for filtered sections
-  totalQuestions = sections.reduce((sum, section) => sum + section.questions.length, 0);
+  totalQuestions = sections.reduce(
+    (sum, section) => sum + section.questions.length,
+    0,
+  );
   headerScore.textContent = `Puntos: 0/${totalQuestions}`;
 }
 
@@ -207,7 +217,7 @@ function startQuiz() {
   startBtn.style.display = 'none';
   optionsContainer.innerHTML = '';
   chatContainer.innerHTML = '';
-  
+
   // Score is now in header, no need to show/hide
   updateScore();
 
@@ -228,11 +238,11 @@ function showSection() {
 
   // Show section title
   addBotMessage(`${section.title}`);
-  
+
   setTimeout(() => {
     // Show instruction
     addBotMessage(section.instruction);
-    
+
     setTimeout(() => {
       // Special handling for ACTIVITY section with story
       if (section.section === 'ACTIVITY' && section.story) {
@@ -246,7 +256,7 @@ function showSection() {
             }, 1000);
           }, 2000);
         }, 1500);
-      } 
+      }
       // Special handling for ABSTRACT section with word bank
       else if (section.section === 'ABSTRACT' && section.wordBank) {
         addBotMessage(`Mga Pagpipilian: ${section.wordBank.join(', ')}`);
@@ -256,8 +266,7 @@ function showSection() {
             showQuestion();
           }, 1000);
         }, 1500);
-      } 
-      else {
+      } else {
         setTimeout(() => {
           showQuestion();
         }, 1000);
@@ -268,7 +277,7 @@ function showSection() {
 
 function showQuestion() {
   const section = sections[currentSectionIndex];
-  
+
   if (currentQuestionIndex >= section.questions.length) {
     // Move to next section
     currentSectionIndex++;
@@ -290,19 +299,23 @@ function showQuestion() {
   setTimeout(() => {
     addBotMessage(question.question);
     // speakText(question.question); // Voice disabled
-    
+
     // Display options based on question type
     if (question.type === 'open-ended') {
       // Check if it's ACTIVITY section - use text input
       if (section.section === 'ACTIVITY') {
         setTimeout(() => {
-          addBotMessage('Ito ay bukas na tanong. Ilagay ang iyong sagot sa kahon sa ibaba.');
+          addBotMessage(
+            'Ito ay bukas na tanong. Ilagay ang iyong sagot sa kahon sa ibaba.',
+          );
           displayTextInputOption(question);
         }, 1000);
       } else {
         // For other open-ended, show a note
         setTimeout(() => {
-          addBotMessage('Ito ay bukas na tanong. Pag-isipan ang iyong sagot at pindutin ang "Ipakita ang Sagot" upang makita ang tamang sagot.');
+          addBotMessage(
+            'Ito ay bukas na tanong. Pag-isipan ang iyong sagot at pindutin ang "Ipakita ang Sagot" upang makita ang tamang sagot.',
+          );
           displayOpenEndedOption(question);
         }, 1000);
       }
@@ -340,10 +353,11 @@ function addBotMessage(text) {
 function addUserMessage(text) {
   const messageDiv = document.createElement('div');
   messageDiv.className = 'user-bubble flex gap-2 justify-end';
-  
+
   // Get gender-specific avatar
-  const avatarSrc = studentInfo.gender === 'female' ? '/female.png' : '/male.png';
-  
+  const avatarSrc =
+    studentInfo.gender === 'female' ? '/female.png' : '/male.png';
+
   messageDiv.innerHTML = `
     <div class="bg-blue-600 border-2 border-blue-500 rounded-lg rounded-tr-none p-3 sm:p-4 max-w-[75%] sm:max-w-md text-white shadow-lg" style="box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);">
       <p class="text-sm sm:text-base">${text}</p>
@@ -352,7 +366,7 @@ function addUserMessage(text) {
   `;
   chatContainer.appendChild(messageDiv);
   chatContainer.scrollTop = chatContainer.scrollHeight;
-  
+
   // Force scroll after a brief delay to ensure rendering is complete
   setTimeout(() => {
     chatContainer.scrollTop = chatContainer.scrollHeight;
@@ -368,14 +382,15 @@ function displayOptions() {
 
   const options = ['a', 'b', 'c', 'd'];
 
-  options.forEach(option => {
+  options.forEach((option) => {
     const btn = document.createElement('button');
-    btn.className = 'option-btn w-full bg-gray-100 border-2 border-blue-500/50 hover:border-blue-400 hover:bg-gray-200 text-left p-3 sm:p-4 rounded-lg font-medium text-slate-900 transition-all';
+    btn.className =
+      'option-btn w-full bg-gray-100 border-2 border-blue-500/50 hover:border-blue-400 hover:bg-gray-200 text-left p-3 sm:p-4 rounded-lg font-medium text-slate-900 transition-all';
     btn.textContent = `${option.toUpperCase()}: ${question.options[option]}`;
     btn.onclick = () => checkAnswer(option, question.options[option]);
     optionsContainer.appendChild(btn);
   });
-  
+
   // Update spacer to push chat content up
   updateChatSpacer();
 }
@@ -387,73 +402,77 @@ function displayFillInBlankOptions(question) {
   const wordBank = section.wordBank;
   optionsContainer.innerHTML = '';
 
-  wordBank.forEach(word => {
+  wordBank.forEach((word) => {
     const btn = document.createElement('button');
-    btn.className = 'option-btn w-full bg-gray-100 border-2 border-blue-500/50 hover:border-blue-400 hover:bg-gray-200 text-center p-3 sm:p-4 rounded-lg font-medium text-slate-900 transition-all';
+    btn.className =
+      'option-btn w-full bg-gray-100 border-2 border-blue-500/50 hover:border-blue-400 hover:bg-gray-200 text-center p-3 sm:p-4 rounded-lg font-medium text-slate-900 transition-all';
     btn.textContent = word;
     btn.onclick = () => checkAnswer(word, word);
     optionsContainer.appendChild(btn);
   });
-  
+
   // Update spacer to push chat content up
   updateChatSpacer();
 }
 
 function displayOpenEndedOption(question) {
   optionsContainer.innerHTML = '';
-  
+
   const btn = document.createElement('button');
-  btn.className = 'option-btn w-full bg-blue-700 border-2 border-blue-600 hover:bg-blue-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-white transition-all';
+  btn.className =
+    'option-btn w-full bg-blue-700 border-2 border-blue-600 hover:bg-blue-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-white transition-all';
   btn.style.boxShadow = '0 0 15px rgba(59, 130, 246, 0.4)';
   btn.textContent = 'Ipakita ang Sagot';
   btn.onclick = () => showOpenEndedAnswer(question);
   optionsContainer.appendChild(btn);
-  
+
   // Update spacer to push chat content up
   updateChatSpacer();
 }
 
 function displayTextInputOption(question) {
   optionsContainer.innerHTML = '';
-  
+
   // Create textarea for student answer
   const textarea = document.createElement('textarea');
-  textarea.className = 'w-full px-4 py-3 border-2 border-blue-500/50 rounded-lg focus:outline-none focus:border-blue-400 text-slate-900 bg-gray-100 resize-none transition-all';
+  textarea.className =
+    'w-full px-4 py-3 border-2 border-blue-500/50 rounded-lg focus:outline-none focus:border-blue-400 text-slate-900 bg-gray-100 resize-none transition-all';
   textarea.placeholder = 'Ilagay ang iyong sagot dito...';
   textarea.rows = 4;
   textarea.id = 'studentAnswer';
-  
+
   // Create submit button
   const submitBtn = document.createElement('button');
-  submitBtn.className = 'option-btn w-full bg-blue-700 border-2 border-blue-600 hover:bg-blue-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-white transition-all mt-2';
+  submitBtn.className =
+    'option-btn w-full bg-blue-700 border-2 border-blue-600 hover:bg-blue-800 text-center p-3 sm:p-4 rounded-lg font-semibold text-white transition-all mt-2';
   submitBtn.style.boxShadow = '0 0 15px rgba(59, 130, 246, 0.4)';
   submitBtn.textContent = 'Ipasa ang Sagot';
   submitBtn.onclick = () => submitTextAnswer(question, textarea);
-  
+
   optionsContainer.appendChild(textarea);
   optionsContainer.appendChild(submitBtn);
-  
+
   // Update spacer to push chat content up
   updateChatSpacer();
-  
+
   // Focus on textarea
   setTimeout(() => textarea.focus(), 100);
 }
 
 function submitTextAnswer(question, textarea) {
   const studentAnswer = textarea.value.trim();
-  
+
   if (!studentAnswer) {
     addBotMessage('Mangyaring magsulat ng sagot bago ipasa.');
     return;
   }
-  
+
   answered = true;
   textarea.disabled = true;
   disableAllOptions();
-  
+
   addUserMessage(studentAnswer);
-  
+
   // Store answer for Google Sheets
   const section = sections[currentSectionIndex];
   studentInfo.answers.push({
@@ -463,19 +482,21 @@ function submitTextAnswer(question, textarea) {
     studentAnswer: studentAnswer,
     correctAnswer: question.answer,
     isCorrect: true, // Credit given for open-ended
-    attempts: 1
+    attempts: 1,
   });
-  
+
   setTimeout(() => {
     addBotMessage('Salamat sa iyong sagot! Narito ang inaasahang sagot:');
     setTimeout(() => {
       addBotMessage(question.answer);
       score++; // Give credit for answering
       updateScore();
-      
+
       setTimeout(() => {
-        addBotMessage('Mahusay! Tumpak ang iyong sagot. Magpatuloy tayo sa susunod na katanungan.');
-        
+        addBotMessage(
+          'Mahusay! Tumpak ang iyong sagot. Magpatuloy tayo sa susunod na katanungan.',
+        );
+
         setTimeout(() => {
           currentQuestionIndex++;
           showQuestion();
@@ -497,9 +518,9 @@ function updateChatSpacer() {
 function showOpenEndedAnswer(question) {
   answered = true;
   disableAllOptions();
-  
+
   addUserMessage('Nais kong makita ang sagot.');
-  
+
   // Store answer for Google Sheets
   const section = sections[currentSectionIndex];
   studentInfo.answers.push({
@@ -509,20 +530,22 @@ function showOpenEndedAnswer(question) {
     studentAnswer: 'Viewed answer directly',
     correctAnswer: question.answer,
     isCorrect: true, // Credit given
-    attempts: 1
+    attempts: 1,
   });
-  
+
   setTimeout(() => {
     addBotMessage('Inaasahang Sagot:');
     setTimeout(() => {
       addBotMessage(question.answer);
       score++; // Give credit for open-ended questions
       updateScore();
-      
+
       setTimeout(() => {
-        addBotMessage('Mahusay! Tumpak! Matalas ang iyong pag-unawa sa aralin. Magpatuloy tayo sa susunod na katanungan.');
+        addBotMessage(
+          'Mahusay! Tumpak! Matalas ang iyong pag-unawa sa aralin. Magpatuloy tayo sa susunod na katanungan.',
+        );
         // speakText('Tumpak!'); // Voice disabled
-        
+
         setTimeout(() => {
           currentQuestionIndex++;
           showQuestion();
@@ -541,7 +564,7 @@ function checkAnswer(selectedOption, selectedText) {
   disableAllOptions();
 
   addUserMessage(selectedText);
-  
+
   const isCorrect = selectedOption === question.correct;
 
   // Store answer for Google Sheets
@@ -550,15 +573,19 @@ function checkAnswer(selectedOption, selectedText) {
     questionNumber: getGlobalQuestionNumber(),
     question: question.question,
     studentAnswer: selectedText,
-    correctAnswer: question.options ? question.options[question.correct] : question.correct,
+    correctAnswer: question.options
+      ? question.options[question.correct]
+      : question.correct,
     isCorrect: isCorrect,
-    attempts: wrongAttempts + 1
+    attempts: wrongAttempts + 1,
   });
 
   if (isCorrect) {
     score++;
     updateScore();
-    addBotMessage('Mahusay! Tumpak! Matalas ang iyong pag-unawa sa aralin. Magpatuloy tayo sa susunod na katanungan.');
+    addBotMessage(
+      'Mahusay! Tumpak! Matalas ang iyong pag-unawa sa aralin. Magpatuloy tayo sa susunod na katanungan.',
+    );
     // speakText('Tumpak! Correct!'); // Voice disabled
 
     setTimeout(() => {
@@ -567,21 +594,23 @@ function checkAnswer(selectedOption, selectedText) {
     }, 2000);
   } else {
     wrongAttempts++;
-    
+
     // Check if current section is PRETEST - only PRETEST gets 3 attempts
     const isPretest = section.section === 'PRETEST';
     const maxAttempts = isPretest ? 3 : 1;
-    
+
     if (wrongAttempts < maxAttempts) {
-      addBotMessage(`Hindi tama. Subukan muli! Balikan at suriin pang mabuti ang aralin. (${wrongAttempts}/${maxAttempts})`);
+      addBotMessage(
+        `Hindi tama. Subukan muli! Balikan at suriin pang mabuti ang aralin. (${wrongAttempts}/${maxAttempts})`,
+      );
       // speakText('Subukan muli!'); // Voice disabled
       answered = false;
       enableAllOptions();
     } else {
-      const correctAnswer = question.options ? 
-        `${question.correct.toUpperCase()}: ${question.options[question.correct]}` : 
-        question.correct;
-      
+      const correctAnswer = question.options
+        ? `${question.correct.toUpperCase()}: ${question.options[question.correct]}`
+        : question.correct;
+
       addBotMessage(`Lubos na pagsubok! Ang tamang sagot ay: ${correctAnswer}`);
       // speakText('Ang tamang sagot ay'); // Voice disabled
 
@@ -597,12 +626,12 @@ function checkAnswer(selectedOption, selectedText) {
 
 function disableAllOptions() {
   const buttons = optionsContainer.querySelectorAll('button');
-  buttons.forEach(btn => btn.disabled = true);
+  buttons.forEach((btn) => (btn.disabled = true));
 }
 
 function enableAllOptions() {
   const buttons = optionsContainer.querySelectorAll('button');
-  buttons.forEach(btn => btn.disabled = false);
+  buttons.forEach((btn) => (btn.disabled = false));
 }
 
 function updateScore() {
@@ -612,7 +641,7 @@ function updateScore() {
 function endQuiz() {
   quizActive = false;
   optionsContainer.innerHTML = '';
-  
+
   // Set end time
   studentInfo.endTime = formatDateTime(new Date());
   studentInfo.score = score;
@@ -623,51 +652,57 @@ function endQuiz() {
   let message = '';
 
   if (percentage >= 90) {
-      message = 'Napakagaling! Perpekto ang iyong pag-unawa sa aralin!';
-    } else if (percentage >= 75) {
-      message = 'Mahusay! Lubos mong naunawaan ang mga pangunahing konsepto!';
-    } else if (percentage >= 60) {
-      message = 'Mabuti! Ipagpatuloy ang pag-aaral upang lalong humusay.';
-    } else {
-      message = 'Kailangan pa ng kaunting pagsasanay. Balikan ang aralin at subukan muli!';
-    }
+    message = 'Napakagaling! Perpekto ang iyong pag-unawa sa aralin!';
+  } else if (percentage >= 75) {
+    message = 'Mahusay! Lubos mong naunawaan ang mga pangunahing konsepto!';
+  } else if (percentage >= 60) {
+    message = 'Mabuti! Ipagpatuloy ang pag-aaral upang lalong humusay.';
+  } else {
+    message =
+      'Kailangan pa ng kaunting pagsasanay. Balikan ang aralin at subukan muli!';
+  }
 
   // 1. Pag-anunsyo ng Iskor
-  addBotMessage(`Tapos na ang pagsusulit! Ang iyong iskor: ${score}/${totalQuestions} (${percentage}%)`);
-  
+  addBotMessage(
+    `Tapos na ang pagsusulit! Ang iyong iskor: ${score}/${totalQuestions} (${percentage}%)`,
+  );
+
   // 2. Paggawad ng Papuri (batay sa iskor)
   setTimeout(() => {
     addBotMessage(message);
     // speakText(`Tapos na ang pagsusulit! Ang iyong iskor: ${score} out of ${totalQuestions}`); // Voice disabled
-    
+
     // 3. Notipikasyon (Pagsisimula ng Proseso)
     setTimeout(() => {
       addBotMessage('Ipinapadala ang iyong mga sagot sa Google Sheets...');
-      
+
       // Send data to Google Sheets in background (no await)
       console.log('Student Quiz Data for Google Sheets:', studentInfo);
       sendToGoogleSheetsBackground(studentInfo);
-      
+
       // 4. Kumpirmasyon (Pagtatapos ng Proseso) - Show immediately after a delay
       setTimeout(() => {
         addBotMessage('Matagumpay na naipadala ang iyong mga sagot!');
-        
+
         // 5. Pangwakas na Pagbati
         setTimeout(() => {
-          addBotMessage('Pagbati, muhasay na mag-aaral! Lubos akong natutuwa sa iyong ipinamalas na galing');
-          
+          addBotMessage(
+            'Pagbati, muhasay na mag-aaral! Lubos akong natutuwa sa iyong ipinamalas na galing',
+          );
+
           // 6. Maikling Paalala/Encouragement
           setTimeout(() => {
             addBotMessage('Patuloy na magbasa, mag-isip, at magsuri!');
-            
+
             // 7. Pagtatapos
             setTimeout(() => {
               addBotMessage('Hanggang sa ating susunod na pag-aaral.');
-              
+
               // Show restart button after all messages
               setTimeout(() => {
                 const restartBtn = document.createElement('button');
-                restartBtn.className = 'w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
+                restartBtn.className =
+                  'w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 text-base sm:text-lg rounded-lg transition-all transform hover:scale-105 active:scale-95';
                 restartBtn.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.4)';
                 restartBtn.textContent = 'Subukan Muli';
                 restartBtn.onclick = () => location.reload();
@@ -694,7 +729,8 @@ function speakText(text) {
 
 // Google Sheets Integration
 // IMPORTANT: Replace this URL with your own Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWfAL7EFFoFxYMMpUODgFBjAziHNp0I2Bo_kWBLITFHZGf5xHxPM2PN5-AcNiH5_4A/exec';
+const GOOGLE_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbzWfAL7EFFoFxYMMpUODgFBjAziHNp0I2Bo_kWBLITFHZGf5xHxPM2PN5-AcNiH5_4A/exec';
 
 // Background function - sends data without showing messages
 async function sendToGoogleSheetsBackground(data) {
@@ -705,12 +741,11 @@ async function sendToGoogleSheetsBackground(data) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
-    
+
     // Note: With 'no-cors', we can't read the response, but the data is sent
     console.log('Data sent to Google Sheets successfully');
-    
   } catch (error) {
     console.error('Error sending to Google Sheets:', error);
   }
@@ -720,25 +755,26 @@ async function sendToGoogleSheetsBackground(data) {
 async function sendToGoogleSheets(data) {
   try {
     // Note: The "sending" message is now shown in endQuiz() function
-    
+
     const response = await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors', // Important for Google Apps Script
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
-    
+
     // Note: With 'no-cors', we can't read the response, but the data is sent
     console.log('Data sent to Google Sheets successfully');
-    
+
     // 4. Kumpirmasyon (Pagtatapos ng Proseso)
     addBotMessage('Matagumpay na naipadala ang iyong mga sagot!');
-    
   } catch (error) {
     console.error('Error sending to Google Sheets:', error);
-    addBotMessage('May problema sa pagpapadala ng data. Ngunit naitala na ang iyong score.');
+    addBotMessage(
+      'May problema sa pagpapadala ng data. Ngunit naitala na ang iyong score.',
+    );
   }
 }
 
@@ -748,23 +784,23 @@ function loadSavedStudentInfo() {
   const savedYearSection = localStorage.getItem('sikhay_student_yearSection');
   const savedGender = localStorage.getItem('sikhay_student_gender');
   const savedEmail = localStorage.getItem('sikhay_student_email');
-  
+
   if (savedName) {
     studentNameInput.value = savedName;
   }
-  
+
   if (savedYearSection) {
     yearSectionInput.value = savedYearSection;
   }
-  
+
   if (savedGender) {
     genderInput.value = savedGender;
   }
-  
+
   if (savedEmail) {
     studentEmailInput.value = savedEmail;
   }
-  
+
   // Always focus on access code if fields are prefilled
   if (savedName && savedYearSection && savedGender && savedEmail) {
     accessCodeInput.focus();
