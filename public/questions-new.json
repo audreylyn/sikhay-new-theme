@@ -734,12 +734,74 @@
     ]
   },
   {
+    "section": "KABANATA33",
+    "title": "KABANATA 33: La Última Razón",
+    "instruction": "Panuto: Basahin at unawain ang tanong. Piliin ang titik ng tamang sagot.",
+    "questions": [
+      {
+        "id": 61,
+        "question": "Ang pahayag ni Basilio na handa na siyang maningil ay nagpapakita ng kanyang?",
+        "options": {
+          "a": "pag-asa",
+          "b": "paghihiganti",
+          "c": "pagkalito",
+          "d": "pagtitiis"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 62,
+        "question": "Nang sabihin ni Simoun na ang kanyang usapin ay usapin ng mga sawimpalad, ipinahihiwatig na?",
+        "options": {
+          "a": "para sa sarili ang kanyang layunin",
+          "b": "para sa mga inaapi ang kanyang pakikibaka",
+          "c": "para sa mga mayayaman ang kanyang plano",
+          "d": "para sa mga dayuhan ang kanyang adhikain"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 63,
+        "question": "Ang pahayag ni Simoun na ang mga mapayapa ang nagtulak sa kanya ay nangangahulugang?",
+        "options": {
+          "a": "sumang-ayon ang lahat sa kanya",
+          "b": "natakot ang mga tao sa kanya",
+          "c": "may epekto ang pananahimik ng mga tao",
+          "d": "pinigilan siya ng mga tao"
+        },
+        "correct": "c"
+      },
+      {
+        "id": 64,
+        "question": "Ang paglalarawan sa dinamita bilang \"luha ng mga api\" ay nagpapahiwatig ng?",
+        "options": {
+          "a": "kapangyarihan",
+          "b": "galit ng inaapi",
+          "c": "kasiyahan",
+          "d": "pagdiriwang"
+        },
+        "correct": "b"
+      },
+      {
+        "id": 65,
+        "question": "Ang agad na pagsang-ayon ni Basilio sa plano ni Simoun ay nagpapakita ng?",
+        "options": {
+          "a": "maingat na pagdedesisyon",
+          "b": "matinding damdamin",
+          "c": "kawalan ng pakialam",
+          "d": "pag-aalinlangan"
+        },
+        "correct": "b"
+      }
+    ]
+  },
+  {
     "section": "POST-TEST",
     "title": "POST-TEST",
     "instruction": "Panuto: Piliin ang pinakatumpak na sagot batay sa iyong natutunan sa El Filibusterismo.",
     "questions": [
       {
-        "id": 61,
+        "id": 66,
         "question": "Ano ang pangunahing tema ng El Filibusterismo?",
         "options": {
           "a": "Pag-ibig at romansa",
@@ -750,7 +812,7 @@
         "correct": "b"
       },
       {
-        "id": 62,
+        "id": 67,
         "question": "Sino si Simoun sa katotohanan?",
         "options": {
           "a": "Isang dayuhang mangangalakal",
@@ -761,7 +823,7 @@
         "correct": "b"
       },
       {
-        "id": 63,
+        "id": 68,
         "question": "Bakit isinulat ni Rizal ang El Filibusterismo?",
         "options": {
           "a": "Para kumita ng pera",
@@ -772,7 +834,7 @@
         "correct": "c"
       },
       {
-        "id": 64,
+        "id": 69,
         "question": "Ano ang pagkakaiba ng Noli Me Tangere at El Filibusterismo?",
         "options": {
           "a": "Ang Noli ay pang-komedya, ang El Fili ay pang-drama",
@@ -783,7 +845,7 @@
         "correct": "b"
       },
       {
-        "id": 65,
+        "id": 70,
         "question": "Ano ang aral na makukuha sa El Filibusterismo?",
         "options": {
           "a": "Ang paghihiganti ay laging tama",
